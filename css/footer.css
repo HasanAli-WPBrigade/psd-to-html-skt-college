@@ -1,0 +1,9 @@
+:root{
+    --footer-padding-y : 70px;
+}
+
+footer{
+    padding-top: var(--footer-padding-y);
+    padding-bottom: var(--footer-padding-y);
+    background-color: #E1E7EB;
+}
