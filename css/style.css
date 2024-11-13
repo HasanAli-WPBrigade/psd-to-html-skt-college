@@ -1,5 +1,6 @@
 :root {
     --color-dark: #172933;
+    --color-dark-text: #05213B;
     --color-primary: #FEBB3A;
     --color-white: #ffffff;
 
@@ -103,3 +104,19 @@ button {
 }
 
 /* End Utility */
+
+
+@media screen and (max-width: 1300px) {
+    :root{
+        --container-spacing-x: 40px;
+    }    
+}
+
+
+@media screen and (max-width: 1024px) {
+    :root{
+        --container-spacing-x: 15px;
+    }    
+}
+
+@media screen and (max-width: 576px) {}
