@@ -243,21 +243,27 @@
         <section class="hero">
             <div class="hero-content-wrapper">
                 <div class="hero-content">
-                    <div class="container outer-container">
+                    <div class="">
                         <div class="hero-column-wrapper">
                             <div class="hero-column-left">
-                                <div class="hero-content-body">
-                                    <h1 class="hero-heading">
-                                        Lörem ipsum folig nettokrati jag nyrad
-                                    </h1>
-                                    <p class="hero-description">
-                                        Lörem ipsum antipöskapet treheten fastän res infraren till preplakeling innan
-                                        pare innan rera, sassa anapren.
-                                    </p>
+                                <div class="container outer-container">
+                                    <div class="hero-content-body">
+                                        <h1 class="hero-heading">
+                                            Lörem ipsum folig nettokrati jag nyrad
+                                        </h1>
+                                        <p class="hero-description">
+                                            Lörem ipsum antipöskapet treheten fastän res infraren till preplakeling innan
+                                            pare innan rera, sassa anapren.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="hero-column-right">
-                                <img src="./images/hero-image-desktop.jpg" alt="">
+                                <picture>
+                                    <source srcset="./images/hero-image-mobile.jpg" media="(max-width: 767px)">
+                                    <source srcset="./images/hero-image-desktop.jpg" media="(min-width: 768px)">
+                                    <img src="./images/hero-image-desktop.jpg" alt="Hero Image">
+                                </picture>                                
                             </div>
                         </div>
                     </div>
@@ -291,7 +297,7 @@
                         </div>
                         <div class="calendar-card-item">
                             <p>Nov 07</p>
-                            <p>Unregister/Cancel Deadline</p>
+                            <p>Term Cancel</p>
                         </div>
                     </div>
                     <div class="calendar-card-footer">
@@ -397,36 +403,45 @@
                         <ul class="course-detail-list">
                             <li class="course-detail-list-item">
                                 <div>
-                                    <img src="./images/icons/university-solid.svg" alt=""
-                                        class="course-detail-list-icon">
+                                    <div class="course-item-icon-wrapper">
+                                        <img src="./images/icons/university-solid.svg" alt="" class="course-detail-list-icon">
+                                    </div>
                                     <span>Total Program Cost:</span>
                                 </div>
                                 <p>$23,914</p>
                             </li>
                             <li class="course-detail-list-item">
                                 <div>
-                                    <img src="./images/icons/calendar.svg" alt="" class="course-detail-list-icon">
+                                    <div class="course-item-icon-wrapper">
+                                        <img src="./images/icons/calendar.svg" alt="" class="course-detail-list-icon">
+                                    </div>
                                     <span>Next Start Date:</span>
                                 </div>
                                 <p>October 1, 2021</p>
                             </li>
                             <li class="course-detail-list-item">
                                 <div>
-                                    <img src="./images/icons/clock.svg" alt="" class="course-detail-list-icon">
+                                    <div class="course-item-icon-wrapper">
+                                        <img src="./images/icons/clock.svg" alt="" class="course-detail-list-icon">
+                                    </div>
                                     <span>Completion Time:</span>
                                 </div>
                                 <p>36 Months</p>
                             </li>
                             <li class="course-detail-list-item">
                                 <div>
-                                    <img src="./images/icons/clock.svg" alt="" class="course-detail-list-icon">
+                                    <div class="course-item-icon-wrapper">
+                                        <img src="./images/icons/star.svg" alt="" class="course-detail-list-icon">
+                                    </div>
                                     <span>AVG. SALARY PREMIUM:</span>
                                 </div>
                                 <p>$12,000</p>
                             </li>
                             <li class="course-detail-list-item">
                                 <div>
-                                    <img src="./images/icons/graduation-cap.svg" alt="" class="course-detail-list-icon">
+                                    <div class="course-item-icon-wrapper">
+                                        <img src="./images/icons/graduation-cap.svg" alt="" class="course-detail-list-icon">
+                                    </div>
                                     <span>Semester Credits:</span>
                                 </div>
                                 <p>64</p>
