@@ -1,4 +1,4 @@
-/* FAQ */
+/* FAQ Section */
 
 .accordion {
     width: 80%;
@@ -34,4 +34,71 @@
 
 .accordion-content p {
     margin: 0;
+}
+
+/* Progress Section */
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 30px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease;
+}
+
+/* Tab Section Slider */
+.tabs {
+    width: 80%;
+    max-width: 600px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    background-color: #ddd;
+}
+
+.tab-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
 }

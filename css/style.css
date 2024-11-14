@@ -103,6 +103,20 @@ img{
     border-radius: var(--button-primary-rounding);
 }
 
+.btn.btn-secondary {
+    background-color: var(--color-primary);
+    font-size: var(--fs-18);
+    font-weight: 700;
+    text-transform: uppercase;
+    min-height: var(--button-primary-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: var(--button-primary-padding-x);
+    padding-right: var(--button-primary-padding-x);
+    border-radius: var(--button-primary-rounding);
+}
+
 .text-primary {
     color: var(--color-primary);
 }

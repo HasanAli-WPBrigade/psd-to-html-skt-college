@@ -76,3 +76,17 @@ function toggleAccordion(index) {
         content.style.display = "block";
     }
 }
+
+function openTab(event, tabId) {
+    // Hide all tab content
+    const tabContent = document.querySelectorAll(".tab-pane");
+    tabContent.forEach(tab => tab.classList.remove("active"));
+
+    // Remove the active class from all tab links
+    const tabLinks = document.querySelectorAll(".tab-link");
+    tabLinks.forEach(link => link.classList.remove("active"));
+
+    // Show the current tab content and add the active class to the clicked tab link
+    document.getElementById(tabId).classList.add("active");
+    event.currentTarget.classList.add("active");
+}

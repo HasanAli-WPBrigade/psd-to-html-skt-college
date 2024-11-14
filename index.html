@@ -241,13 +241,26 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
-                <div class="container outer-container">
-                    <h1 class="hero-heading">Lörem ipsum folig nettokrati jag nyrad</h1>
-                    <p class="hero-description">
-                        Lörem ipsum antipöskapet treheten fastän res infraren till preplakeling
-                        innan pare innan rera, sassa anapren.
-                    </p>
+            <div class="hero-content-wrapper">
+                <div class="hero-content">
+                    <div class="container outer-container">
+                        <div class="hero-column-wrapper">
+                            <div class="hero-column-left">
+                                <div class="hero-content-body">
+                                    <h1 class="hero-heading">
+                                        Lörem ipsum folig nettokrati jag nyrad
+                                    </h1>
+                                    <p class="hero-description">
+                                        Lörem ipsum antipöskapet treheten fastän res infraren till preplakeling innan
+                                        pare innan rera, sassa anapren.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hero-column-right">
+                                <img src="./images/hero-image-desktop.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -291,8 +304,72 @@
             </div>
         </section>
 
-        <!-- Slider Section -->
+        <!-- Tab Slider Section -->
+        <section class="tab-slider-section">
 
+            <div class="container inner-container">
+                <h3 class="tab-slider-section-title">Lörem ipsum dumpling böhet </h3>
+                <div class="tabs">
+                    <div class="tab-header">
+                        <button class="tab-link active" onclick="openTab(event, 'tab1')">Tab 1</button>
+                        <button class="tab-link" onclick="openTab(event, 'tab2')">Tab 2</button>
+                        <button class="tab-link" onclick="openTab(event, 'tab3')">Tab 3</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane active">
+                            <div class="slider">
+                                <div class="slide-item">
+                                    <div class="slide-item-image-wrapper">
+                                        <img src="./images/slider-item-1-image.jpg" alt="">
+                                    </div>
+                                    <div class="slide-item-content-wrapper">
+                                        <h4 class="slide-item-title">Triitet kagen. </h4>
+                                        <p>Trigt nypade. </p>
+                                    </div>
+                                </div>
+                                <div class="slide-item">
+                                    <div class="slide-item-image-wrapper">
+                                        <img src="./images/slider-item-1-image.jpg" alt="">
+                                    </div>
+                                    <div class="slide-item-content-wrapper">
+                                        <h4 class="slide-item-title">Triitet kagen. </h4>
+                                        <p>Trigt nypade. </p>
+                                    </div>
+                                </div>
+                                <div class="slide-item">
+                                    <div class="slide-item-image-wrapper">
+                                        <img src="./images/slider-item-1-image.jpg" alt="">
+                                    </div>
+                                    <div class="slide-item-content-wrapper">
+                                        <h4 class="slide-item-title">Triitet kagen. </h4>
+                                        <p>Trigt nypade. </p>
+                                    </div>
+                                </div>
+                                <div class="slide-item">
+                                    <div class="slide-item-image-wrapper">
+                                        <img src="./images/slider-item-1-image.jpg" alt="">
+                                    </div>
+                                    <div class="slide-item-content-wrapper">
+                                        <h4 class="slide-item-title">Triitet kagen. </h4>
+                                        <p>Trigt nypade. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab-pane">
+                            <h2>Tab 2 Content</h2>
+                            <p>This is the content for Tab 2.</p>
+                        </div>
+                        <div id="tab3" class="tab-pane">
+                            <h2>Tab 3 Content</h2>
+                            <p>This is the content for Tab 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <!-- content-one Section -->
         <section class="content-one-section">
@@ -515,11 +592,151 @@
         <!-- Progress Section -->
         <section class="progress-section">
             <div class="container inner-container">
-                
+                <h3 class="progress-section-title">Tregåsa dogågisk</h3>
+                <div class="progress-list-wrapper">
+                    <ul class="progress-list">
+
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <div class="progress-title-with-logo">
+                                        <img src="./images/logo.svg" alt="logo">
+                                        <p>$9,500</p>
+                                    </div>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <h3 class="progress-title">
+                                        Walden University
+                                    </h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <h3 class="progress-title">
+                                        Grand Canyon University
+                                    </h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <h3 class="progress-title">
+                                        University of Pheonix
+                                    </h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <h3 class="progress-title">
+                                        Capella University
+                                    </h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="progress-item-inner">
+                                <div class="progress-title-wrapper">
+                                    <h3 class="progress-title">
+                                        Concordia University
+                                    </h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div style="width: 50%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container inner-container">
+                <div class="newsletter-content-wrapper">
+                    <h3 class="newsletter-section-title"></h3>
+                    <p class="newsletter-content-description"></p>
+                    <div class="newsletter-cta-group">
+                        <button class="btn btn-primary">Kagt maska Kag </button>
+                        <button class="btn btn-secondary">dogågisk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Bottom Slider -->
+        <section class="bottom-slider-section">
+            <div class="container inner-container">
+                <div class="bottom-slider">
+                    <div class="bottom-slide">
+                        <a href="#">
+                            <div class="bottom-slide-image-wrapper">
+                                <img src="./images/footer-slider-image-1.jpg" alt="slider image">
+                            </div>
+                            <div class="bottom-slide-content">
+                                <p class="bottom-slide-description">Lörem ipsum infragon måskade netevoll. </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bottom-slide">
+                        <a href="#">
+                            <div class="bottom-slide-image-wrapper">
+                                <img src="./images/footer-slider-image-1.jpg" alt="slider image">
+                            </div>
+                            <div class="bottom-slide-content">
+                                <p class="bottom-slide-description">Lörem ipsum infragon måskade netevoll. </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bottom-slide">
+                        <a href="#">
+                            <div class="bottom-slide-image-wrapper">
+                                <img src="./images/footer-slider-image-1.jpg" alt="slider image">
+                            </div>
+                            <div class="bottom-slide-content">
+                                <p class="bottom-slide-description">Lörem ipsum infragon måskade netevoll. </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bottom-slide">
+                        <a href="#">
+                            <div class="bottom-slide-image-wrapper">
+                                <img src="./images/footer-slider-image-1.jpg" alt="slider image">
+                            </div>
+                            <div class="bottom-slide-content">
+                                <p class="bottom-slide-description">Lörem ipsum infragon måskade netevoll. </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
