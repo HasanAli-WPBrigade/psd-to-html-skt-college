@@ -191,29 +191,8 @@
     margin: 0;
 }
 
-/* Progress Section */
-
-.progress-container {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar {
-    height: 30px;
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    line-height: 30px;
-    font-weight: bold;
-    border-radius: 5px 0 0 5px;
-    transition: width 0.3s ease;
-}
-
 /* Tab Section Slider */
-.tab-slider-section {
+.tab-slider-section, .bottom-slider-section {
     display: none;
 }
 
@@ -409,4 +388,98 @@
 
 .video-two-section {
     margin-top: 50px;
+}
+
+/* Progress Section */
+.progress-section{
+    margin-top: 50px;
+}
+
+.progress-section-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--fs-32);
+    margin-bottom: 30px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #E1E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 16px;
+    background-color: #172933;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease;
+}
+
+.progress-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.progress-title{
+    margin-bottom: 14px;
+    font-size: var(--fs-16);
+    font-weight: 700;
+}
+
+.progress-title-with-logo{
+    display: flex;
+    align-items: flex-end;
+}
+
+.progress-title-with-logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.progress-title-with-logo p {
+    font-size: var(--fs-16);
+    font-weight: 800;
+}
+
+/* Newsletter Section */
+
+.newsletter-section {
+    background-color: #172933;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    margin-top: 50px;
+}
+
+.newsletter-section-title{
+    text-align: center;
+    font-size: var(--fs-32);
+    margin-bottom: 36px;
+}
+
+.newsletter-content-description{
+    text-align: center;
+    font-size: var(--fs-16);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.newsletter-section .btn {
+    max-width: 290px;
+    width: 100%;
+    margin: auto;
+}
+
+.newsletter-cta-group{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
