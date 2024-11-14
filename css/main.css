@@ -127,6 +127,24 @@
     min-height: 50px;
 }
 
+@media screen and (min-width : 1023px) {
+    .calendar-card-footer{
+        display: flex;
+        gap: 40px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .calendar-card-header, .calendar-card-footer, .calendar-card-item{
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    .calendar-card-footer-content{
+        margin: 0px;
+    }
+}
+
 /* FAQ Section */
 
 .faq-section {
@@ -269,6 +287,21 @@
     line-height: 26px;
 }
 
+.content-one-image{
+    width: 100%;
+}
+
+@media screen and (min-width : 1023px) {
+    .content-one-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-one-image{
+        width: 50%;
+    }
+}
+
 /* Course Detail Section */
 
 .course-detail-section {
@@ -360,6 +393,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #E6F2F5;
+    background-image: url(../images/video-section-pattern.png);
 }
 
 .video-section-title {
@@ -451,6 +485,7 @@
 
 .newsletter-section {
     background-color: #172933;
+    background-image: url(../images/newsletter-bg-pattern.png);
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 40px;
@@ -483,3 +518,5 @@
     flex-direction: column;
     gap: 16px;
 }
+
+
