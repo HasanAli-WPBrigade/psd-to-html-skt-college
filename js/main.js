@@ -61,3 +61,18 @@ dropdownToggles.forEach(button => {
     })
 })
 
+function toggleAccordion(index) {
+    const items = document.querySelectorAll('.accordion-item');
+    const content = items[index].querySelector('.accordion-content');
+
+    // Toggle the display of the clicked section
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        // Hide all other sections
+        document.querySelectorAll('.accordion-content').forEach(function (item) {
+            item.style.display = "none";
+        });
+        content.style.display = "block";
+    }
+}

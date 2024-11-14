@@ -55,6 +55,10 @@ button {
     cursor: pointer;
 }
 
+img{
+    max-width: 100%;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;

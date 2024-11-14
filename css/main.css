@@ -1,0 +1,37 @@
+/* FAQ */
+
+.accordion {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #0056b3;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.accordion-content p {
+    margin: 0;
+}
