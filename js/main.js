@@ -72,7 +72,7 @@ function toggleAccordion(index) {
     } else {
         currentItem.classList.add("expanded")
     }
-    
+
     // if (content.style.display === "block") {
     //     content.style.display = "none";
     // } else {
@@ -84,7 +84,17 @@ function toggleAccordion(index) {
     // }
 }
 
+const tabLinks = document.querySelectorAll('.tab-slider-section .tab-link')
+tabLinks.forEach(tabLink => {
+    tabLink.addEventListener('click', e => {
+        openTab(e, tabLink.dataset.tab)
+    })
+})
+
 function openTab(event, tabId) {
+
+
+
     // Hide all tab content
     const tabContent = document.querySelectorAll(".tab-pane");
     tabContent.forEach(tab => tab.classList.remove("active"));
@@ -96,4 +106,77 @@ function openTab(event, tabId) {
     // Show the current tab content and add the active class to the clicked tab link
     document.getElementById(tabId).classList.add("active");
     event.currentTarget.classList.add("active");
+
 }
+
+
+$(document).ready(function () {
+    $('.tab-header-slider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+});
+
+const sliderOptions = {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    dots: false,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+}
+
+$(`#tab1 .slider`).slick(sliderOptions)
+$(`.bottom-slider`).slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    dots: false,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+})
+

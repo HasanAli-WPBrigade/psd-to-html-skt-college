@@ -221,45 +221,52 @@
 }
 
 /* Tab Section Slider */
-.tab-slider-section, .bottom-slider-section {
-    display: none;
+
+.tab-slider-section-title{
+    font-size: var(--fs-32);
+    margin-bottom: 40px; 
 }
 
-.tabs {
-    width: 80%;
-    max-width: 600px;
+.tab-slider-section{
+    margin-top: var(--section-spacing-y);
 }
 
-.tab-header {
-    display: flex;
-    border-bottom: 2px solid #ddd;
+.tab-slider-section .slick-arrow{
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .tab-link {
     flex: 1;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    text-align: center; 
     cursor: pointer;
-    background-color: #f1f1f1;
     border: none;
     outline: none;
     transition: background-color 0.3s;
-    font-weight: bold;
+    font-weight: 600;
+    color: #8894A7;
 }
 
-.tab-link:hover {
-    background-color: #ddd;
+.slide-item-title{
+    font-size: var(--fs-18);
+    font-weight: 700;
 }
+
+.slide-item-content-wrapper p {
+    font-size: var(--fs-16);
+    font-weight: 400;
+}   
 
 .tab-link.active {
-    background-color: #007bff;
-    color: white;
+    color: #172933;
 }
 
 .tab-content {
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: white;
+
 }
 
 .tab-pane {
@@ -268,6 +275,19 @@
 
 .tab-pane.active {
     display: block;
+}
+
+.slide-item{
+    padding: 15px;
+}
+
+.slide-item img {
+    width: 100%;
+    display: block;
+}
+
+.slide-item-image-wrapper{
+    margin-bottom: 15px;
 }
 
 /* Content one section */
@@ -560,4 +580,22 @@
     gap: 16px;
 }
 
+@media screen and (min-width : 1023px) {
+    .newsletter-cta-group{
+        flex-direction: row;
+        justify-content: center;
+    }   
+    .newsletter-cta-group .btn{
+        margin: 0px;
+    } 
+}
 
+
+/* Bottom Slider */
+
+.bottom-slider .slick-arrow{
+    position: absolute;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+}
