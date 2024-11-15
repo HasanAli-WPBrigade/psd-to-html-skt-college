@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
     <link rel="stylesheet" href="./vendor/slick/slick.css">
 
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -1113,7 +1117,9 @@
         <!-- content-one Section -->
         <section class="content-one-section">
             <div class="content-one-wrapper">
-                <img src="./images/info-section-image.jpg" alt="Info Section Image" class="content-one-image">
+                <div class="content-one-image-wrapper">
+                    <img src="./images/info-section-image.jpg" alt="Info Section Image" class="content-one-image">
+                </div>
                 <div class="content-one-container">
                     <h3 class="content-one-title">Snippgympa homofaktig</h3>
                     <p class="content-one-description">Lörem ipsum antipöskapet treheten fastän res infraren till
@@ -1241,7 +1247,7 @@
                             intraledes. Ganiv övis. Nöröbel ter poktigt far. Kemusamma kabivis i ben och terapeutisk
                             kloning plus polyck
                         </p>
-                        <a href="#" class="video-section-cta">
+                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=MMFqJFqdSJg" class="video-section-cta">
                             <img src="./images/icons/play-video.svg" alt="Play Video">
                             <span>Watch Video</span>
                         </a>
@@ -1270,7 +1276,7 @@
                             i prere heska, göra en labrador. Igt måfuktig. Misade epigisade, kronera: astrogisk. Kroment
                             trirade äling i pseudoskap sed.
                         </p>
-                        <a href="#" class="video-section-cta">
+                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=MMFqJFqdSJg" class="video-section-cta">
                             <img src="./images/icons/play-video.svg" alt="Play Video">
                             <span>Watch Video</span>
                         </a>
@@ -1703,6 +1709,7 @@
     </footer>
 
     <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./vendor/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

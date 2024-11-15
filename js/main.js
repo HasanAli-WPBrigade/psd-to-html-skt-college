@@ -133,50 +133,64 @@ $(document).ready(function () {
         ]
     });
 
+    const sliderOptions = {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    }
+
+    $(`#tab1 .slider`).slick(sliderOptions)
+    $(`.bottom-slider`).slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+
+    $("[data-fancybox]").fancybox({
+        buttons: [
+            "close"
+        ],
+        youtube: {
+            controls: 1,
+            showinfo: 0
+        },
+        vimeo: {
+            color: "f00"
+        }
+    });
+
+
 });
-
-const sliderOptions = {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: false,
-    arrows: true,
-    dots: false,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-    ]
-}
-
-$(`#tab1 .slider`).slick(sliderOptions)
-$(`.bottom-slider`).slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    infinite: false,
-    arrows: true,
-    dots: false,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-    ]
-})
 
