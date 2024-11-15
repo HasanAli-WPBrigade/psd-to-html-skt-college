@@ -5,6 +5,16 @@ const dropdownToggles = document.querySelectorAll(".has-dropdown")
 const mobileSearchbarWrapper = document.querySelector(".mobile-search-wrapper")
 const searchBtn = document.querySelector(".search-wrapper")
 const searchContainer = document.querySelector(".searchbar-container-wrapper")
+const offcanvas = document.querySelector('.offcanvas');
+const backdrop = document.querySelector('.offcanvas-backdrop');
+const formContent = document.querySelector('.form-content');
+const thankYouContent = document.querySelector('.thank-you-content');
+const contactFormOpenBtn = document.querySelector('#contact-form-button')
+
+contactFormOpenBtn.addEventListener('click', e => {
+    e.preventDefault()
+    openOffcanvas()
+})
 
 searchBtn.addEventListener('click', () => {
     if (searchContainer.classList.contains("show")) {
@@ -117,6 +127,8 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         dots: false,
+        prevArrow: '<button class="tabheaderslider-prev"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="tabheaderslider-next"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -139,6 +151,8 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         dots: true,
+        prevArrow: '<button class="tabslider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="tabslider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -194,3 +208,48 @@ $(document).ready(function () {
 
 });
 
+
+function openOffcanvas() {
+    offcanvas.classList.add('show');
+    backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    // Reset form state when opening
+    showForm();
+}
+
+function closeOffcanvas() {
+    offcanvas.classList.remove('show');
+    backdrop.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+function showForm() {
+    formContent.classList.remove('hide');
+    thankYouContent.classList.add('hide');
+    document.getElementById('requestForm').reset();
+}
+
+function showThankYou() {
+    formContent.classList.add('hide');
+    thankYouContent.classList.remove('hide');
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    showThankYou();
+}
+
+// Close offcanvas when clicking backdrop
+backdrop.addEventListener('click', closeOffcanvas);
+
+// Close offcanvas when pressing Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && offcanvas.classList.contains('show')) {
+        closeOffcanvas();
+    }
+});
+
+// Prevent closing when clicking inside offcanvas
+offcanvas.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
