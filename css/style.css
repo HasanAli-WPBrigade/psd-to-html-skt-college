@@ -26,8 +26,7 @@
 
     --container-spacing-x: 15px;
 
-    --outer-container-width: calc(1560px + var(--container-spacing-x));
-    --inner-container-width: calc(1170px + var(--container-spacing-x));
+    --container-width : 1214px;
 }
 
 * {
@@ -72,14 +71,7 @@ header{
     width: 100%;
     padding-left: var(--container-spacing-x);
     padding-right: var(--container-spacing-x);
-}
-
-.outer-container {
-    max-width: var(--outer-container-width);
-}
-
-.inner-container {
-    max-width: var(--inner-container-width);
+    max-width: var(--container-width); 
 }
 
 /* Utility */

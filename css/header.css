@@ -1,5 +1,5 @@
 :root{
-    --topbar-items-spacing-x: 56px;
+    --topbar-items-spacing-x: 57px;
     --topbar-spacing-y: 6px;
     --topbar-height: 48px;
 
@@ -9,10 +9,10 @@
 
     --desktop-navigation-item-height: var(--navbar-height);
 
-    --desktop-navigation-spacing-x: 50px;
+    --desktop-navigation-spacing-x: 59px;
 
 
-    --button-primary-padding-x: 24px;
+    --button-primary-padding-x: 36px;
     --button-primary-rounding: 10px;
     --button-primary-height: 60px;
 
@@ -41,6 +41,14 @@ header {
     position: relative;
 }
 
+header .desktop-navigation-link{
+    margin-top: -10px;
+}
+
+header .desktop-navigation{
+    column-gap: var(--desktop-navigation-spacing-x);
+}
+
 .topbar {
     display: flex;
     align-items: center;
@@ -59,8 +67,13 @@ header {
 .topbar-navigation-link {
     font-size: var(--fs-13);
     color: var(--color-white);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
+    line-height: 3;
+}
+
+.topbar-navigation-button img{
+    margin-top: 5px;
 }
 
 .topbar-navigation-item {
@@ -178,8 +191,10 @@ header {
 /* Navbar */
 
 .logo {
-    max-width: 176px;
+    max-width: 190px;
     width: 100%;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 
@@ -211,9 +226,9 @@ header {
     width: 30px;
 }
 
-.desktop-navigation {
+/* .desktop-navigation {
     column-gap: var(--desktop-navigation-spacing-x);
-}
+} */
 
 .desktop-navigation-link {
     font-size: var(--fs-18);
@@ -444,6 +459,7 @@ header {
 
     .logo {
         max-width: 100px;
+        margin: 0px;
     }
 
     .dropdown{

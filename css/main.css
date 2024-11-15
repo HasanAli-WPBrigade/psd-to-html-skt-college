@@ -73,13 +73,12 @@
 }
 
 .hero-content-container {
-    max-width: 700px;
+    max-width: 782px;
     margin-left: auto;
     padding: 10px;
 }
 
 @media screen and (min-width : 1023px) {
-
     .hero-column-right {
         position: relative;
         flex: 1;
@@ -88,8 +87,6 @@
     .hero-column-left {
         position: relative;
         flex: 1;
-        display: flex;
-        align-items: center;
     }
 
     .hero-column-left::before {
@@ -97,21 +94,27 @@
         position: absolute;
         background-color: #172933;
         border-radius: 100%;
-        top: -400px;
-        bottom: -400px;
-        left: -200px;
-        right: -100px;
+        width: 3465px;
+        height: 3465px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -76px;
+    }
+
+    .hero-column-right img {
+        margin-left: 14px;
     }
 
     .hero-column-left::after {
         content: "";
         position: absolute;
         border-radius: 100%;
-        top: -400px;
-        bottom: -400px;
-        left: -200px;
-        right: -130px;
-        border: 30px solid rgba(255, 255, 255, 30%);
+        width: 3465px;
+        height: 3465px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -121px;
+        border: 46px solid rgba(255, 255, 255, 30%);
     }
 
     .hero-column-wrapper {
@@ -130,6 +133,13 @@
     .hero-heading {
         font-size: var(--fs-64);
         line-height: 74px;
+        padding-bottom: 41px;
+        margin-bottom: 12px;
+    }
+
+    .hero-heading::after {
+        width: 80px;
+        height: 5px;
     }
 
     .hero-column-right::after {
@@ -139,6 +149,7 @@
     .hero-content-body {
         position: relative;
         z-index: 4;
+        margin-top: 128px;
     }
 }
 
