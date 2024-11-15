@@ -82,16 +82,6 @@ function toggleAccordion(index) {
     } else {
         currentItem.classList.add("expanded")
     }
-
-    // if (content.style.display === "block") {
-    //     content.style.display = "none";
-    // } else {
-    //     // Hide all other sections
-    //     document.querySelectorAll('.accordion-content').forEach(function (item) {
-    //         item.style.display = "none";
-    //     });
-    //     content.style.display = "block";
-    // }
 }
 
 const tabLinks = document.querySelectorAll('.tab-slider-section .tab-link')
@@ -253,3 +243,4 @@ document.addEventListener('keydown', (e) => {
 offcanvas.addEventListener('click', (e) => {
     e.stopPropagation();
 });
+
