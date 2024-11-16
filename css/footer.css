@@ -18,13 +18,21 @@ footer a:hover {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1fr 660px;
+    grid-template-columns: 1fr 670px;
 }
 
 .footer-logo {
     max-width: 215px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
+}
+
+.footer-navigation-list{
+    margin-top: -9px;
+}
+
+.footer-navigation-list li {
+    margin-bottom: 7px;
 }
 
 .footer-about h3 {
@@ -37,17 +45,18 @@ footer a:hover {
 .footer-about-info {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 6px;
     max-width: 280px;
 }
 
 .footer-about-info li {
     display: flex;
     align-items: flex-start;
-    column-gap: 10px;
+    column-gap: 12px;
     color: var(--color-dark-text);
     font-size: var(--fs-15);
     font-weight: 500;
+    margin-top: 3px;
 }
 
 .footer-about-info li img {
@@ -264,5 +273,14 @@ footer a:hover {
 @media screen and (min-width: 1023px) {
     footer .container{
         padding: 0px;
+    }
+
+    .footer-right-top p {
+        padding-right: 12px;
+        padding-top: 3px;
+    }
+
+    .footer-right-top img {
+        padding-right: 3px;
     }
 }
