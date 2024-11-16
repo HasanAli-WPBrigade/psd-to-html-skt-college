@@ -913,6 +913,57 @@
     font-weight: 800;
 }
 
+@media screen and (min-width : 1023px) {
+    .progress-section {
+        padding-top: 158px;
+    }
+    
+    .progress-section-title{
+        font-size: 54px;
+        margin-top: -9px;
+    }    
+
+    .progress-list{
+        max-width: 740px;
+        margin: auto;
+    }
+
+    .progress-item-inner{
+        display: flex;
+        align-items: center;
+        text-align: right;
+        /* gap: 30px; */
+        justify-content: space-between;
+    }
+
+    .progress-title-wrapper{
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .progress-container{
+        max-width: 500px;
+    }
+
+    .progress-title-wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .progress-title-with-logo p{
+        display: none;
+    }
+
+    .progress-title-with-logo img {
+        min-width: 213px;
+        /* margin-bottom: 10px; */
+    }
+
+    /* .progress-container{
+        margin-left: 50px;
+    } */
+}
+
 /* Newsletter Section */
 
 .newsletter-section {
