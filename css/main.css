@@ -1077,20 +1077,7 @@
     opacity: 1;
 }
 
-body {
-    position: relative;
-}
 
-body::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0px;
-    bottom: 0px;
-    transform: translateX(-50%);
-    width: 1px;
-    background-color: red;
-}
 
 /* Stepper Form */
 
@@ -1272,4 +1259,20 @@ input {
     .offcanvas.show {
         transform: translateX(-100%);
     }
+}
+
+
+body {
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: red;
 }
