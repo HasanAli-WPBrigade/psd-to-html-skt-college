@@ -49,6 +49,11 @@ header .desktop-navigation{
     column-gap: var(--desktop-navigation-spacing-x);
 }
 
+.topbar .container, .navbar-wrapper .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .topbar {
     display: flex;
     align-items: center;
@@ -193,7 +198,6 @@ header .desktop-navigation{
 .logo {
     max-width: 190px;
     width: 100%;
-    margin-left: 15px;
     margin-top: 5px;
 }
 
