@@ -1039,8 +1039,23 @@
 
 /* Bottom Slider */
 
+.bottom-slide{
+    height: 245px;
+}
+
 .bottom-slide img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-slide a {
+    display: block;
+    height: 100%;
+}
+
+.bottom-slide-image-wrapper{
+    height: 100%;
 }
 
 .bottom-slider .slick-arrow {

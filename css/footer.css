@@ -4,7 +4,7 @@
 
 footer {
     padding-top: var(--footer-padding-y);
-    padding-bottom: var(--footer-padding-y);
+    padding-bottom: 90px;
     background-color: #E4EAEC;
 }
 
@@ -260,3 +260,9 @@ footer a:hover {
 }
 
 @media screen and (max-width: 576px) {}
+
+@media screen and (min-width: 1023px) {
+    footer .container{
+        padding: 0px;
+    }
+}
