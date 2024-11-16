@@ -243,6 +243,31 @@
     .calendar-card-footer-content {
         margin: 0px;
     }
+
+    .calender .container {
+        padding-left: 29px;
+        padding-right: 13px;
+    }
+
+    .calendar-card-title {
+        text-align: center;
+    }
+
+    .calendar-card-header {
+        padding-top: 17px;
+        padding-bottom: 21px;
+    }
+
+    .calendar-card-item {
+        padding-top: 19px;
+        column-gap: 70px;
+    }
+
+    .calendar-card-footer .btn.btn-primary {
+        max-width: 290px;
+        font-size: var(--fs-16);
+    }
+
 }
 
 /* FAQ Section */
@@ -450,6 +475,7 @@
     padding-right: var(--container-spacing-x); */
     background-color: var(--color-primary);
 }
+
 .content-one-container-inner {
     max-width: 650px;
     margin-right: auto;
@@ -490,7 +516,7 @@
         flex: 1;
     }
 
-    .content-one-container-inner{
+    .content-one-container-inner {
         padding-top: 90px;
         padding-bottom: 90px;
         margin-left: 100px;
@@ -503,7 +529,7 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-    
+
     .content-one-description {
         font-size: var(--fs-16);
         font-weight: 500;
