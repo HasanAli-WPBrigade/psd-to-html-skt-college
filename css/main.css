@@ -914,9 +914,6 @@
 }
 
 @media screen and (min-width : 1023px) {
-    .progress-section {
-        padding-top: 158px;
-    }
     
     .progress-section-title{
         font-size: 54px;
@@ -926,6 +923,13 @@
     .progress-list{
         max-width: 740px;
         margin: auto;
+        padding-left: 90px;
+        padding-top: 6px;
+        gap: 0px;
+    }
+
+    .progress-title{
+        padding-right: 30px;
     }
 
     .progress-item-inner{
@@ -933,7 +937,7 @@
         align-items: center;
         text-align: right;
         /* gap: 30px; */
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .progress-title-wrapper{
@@ -1008,8 +1012,27 @@
         justify-content: center;
     }
 
+    .newsletter-section-title{
+        font-size: 54px;
+        margin-top: -8px;
+    }
+
+    .newsletter-content-description{
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
     .newsletter-cta-group .btn {
         margin: 0px;
+    }
+
+    .newsletter-section .container{
+        padding: 0px;
+    }
+
+    .newsletter-section-title{
+        margin-bottom: 44px;
     }
 }
 
