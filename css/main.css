@@ -1098,6 +1098,7 @@
 .bottom-slider .slick-arrow {
     position: absolute;
     background-color: black;
+    z-index: 10;
 }
 
 .bottom-slider .slick-arrow{
@@ -1105,6 +1106,13 @@
     transform: translateY(-50%);
     background-color: transparent;
     max-width: 30px;
+}
+
+.bottom-slider .bottom-slider-prev{
+    left: 58px !important;
+    top: 33%;
+    transform: rotate(180deg) translateY(-50%);
+    transform-origin: center;
 }
 
 .bottom-slider .bottom-slider-next{
