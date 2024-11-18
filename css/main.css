@@ -236,7 +236,7 @@
     .calendar-card-header,
     .calendar-card-footer,
     .calendar-card-item {
-        padding-left: 36px;
+        padding-left: 35px;
         padding-right: 36px;
     }
 
@@ -254,17 +254,17 @@
     }
 
     .calendar-card-header {
-        padding-top: 17px;
+        padding-top: 18px;
         padding-bottom: 21px;
     }
 
     .calendar-card-item {
         padding-top: 19px;
-        column-gap: 70px;
+        column-gap: 68px;
     }
 
     .calendar-card-footer .btn.btn-primary {
-        max-width: 290px;
+        max-width: 288px;
         font-size: var(--fs-16);
     }
 
@@ -276,7 +276,7 @@
     margin-top: var(--section-spacing-y);
     background-color: rgba(23, 41, 51, 10%);
     padding-top: var(--section-spacing-y);
-    padding-bottom: calc(var(--section-spacing-y) - 10px);
+    padding-bottom: calc(var(--section-spacing-y) - 5px);
 }
 
 .faq-section-title {
@@ -308,7 +308,7 @@
     border-radius: 5px;
     background-color: white;
     color: #222D34;
-    padding: 13px;
+    padding: 12px 19px;
     cursor: pointer;
     text-align: left;
     font-size: 18px;
@@ -339,6 +339,10 @@
 
 @media screen and (min-width : 1023px) {
 
+    .accordion-header h2{
+        font-size: var(--fs-18);
+    }
+
     .faq-section-accordion-wrapper {
         display: flex;
         gap: 30px;
@@ -364,7 +368,7 @@
     }
 
     .accordion-item {
-        margin-bottom: 3px;
+        margin-bottom: 2px;
     }
 }
 
@@ -385,13 +389,17 @@
 
 .tab-header-slider .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     transition: all 300ms ease-in-out;
 }
 
 .tabheaderslider-next {
-    right: 0px;
+    right: 5px;
+}
+
+.tabheaderslider-prev {
+    left: -25px;
 }
 
 .tab-header-slider .tabheaderslider-prev {
@@ -404,6 +412,10 @@
     top: 80px;
     transition: all 300ms ease-in-out;
 
+}
+
+.tab-header-slider .slick-track {
+    padding-left: 20px;
 }
 
 .slider .slick-arrow::before {
@@ -447,7 +459,7 @@
 
 .tab-link {
     flex: 1;
-    margin-top: 15px;
+    margin-top: 17px;
     margin-bottom: 15px;
     text-transform: uppercase;
     text-align: center;
@@ -484,7 +496,7 @@
 }
 
 .slide-item {
-    padding-top: 15px;
+    padding-top: 13px;
     padding-bottom: 15px;
     margin-right: 30px;
     /* margin: 0px 15px; */
@@ -523,7 +535,7 @@
 
     left: 50%;
     transform: translateX(-50%);
-    bottom: -47px;
+    bottom: -50px;
 }
 
 
@@ -560,24 +572,36 @@
         padding: 0px;
     }
 
+    .tab-header-slider .tab-link {
+        max-width: max-content;
+    }
+
+    .tab-header-slider .slick-active:not(:last-child){
+        margin-right: 103px;
+        white-space: nowrap;
+    }
+
     .tab-slider-section {
         padding-top: var(--section-spacing-y);
     }
 
     .tab-slider-section-title {
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: -2px;
+        margin-left: -1px;
     }
 
     .tab-content {
-        padding-top: 29px;
+        padding-top: 4px;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .slide-item-title {
-        margin-bottom: 6px;
+        margin-bottom: 3px;
     }
 }
 
@@ -585,6 +609,7 @@
 /* Content one section */
 .content-one-section {
     margin-top: var(--section-spacing-y);
+    padding-top: 4px;
 }
 
 .content-one-image {
@@ -748,7 +773,7 @@
 }
 
 .course-detail-list-item .course-item-icon-wrapper {
-    width: 24px;
+    width: 22px;
 }
 
 .course-detail-list-item>p {
@@ -758,7 +783,7 @@
 }
 
 .course-detail-item {
-    padding-top: 30px;
+    padding-top: 29px;
     padding-bottom: 30px;
     padding-left: 20px;
 }
@@ -823,6 +848,10 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: 27px;
+}
+
+.video-two-section .video-section-cta{
     margin-top: 30px;
 }
 
@@ -1012,6 +1041,10 @@
         justify-content: center;
     }
 
+    .newsletter-cta-group .btn{
+        font-size: 16px;
+    }
+
     .newsletter-section-title{
         font-size: 54px;
         margin-top: -8px;
@@ -1025,6 +1058,7 @@
 
     .newsletter-cta-group .btn {
         margin: 0px;
+        border-radius: 5px;
     }
 
     .newsletter-section .container{

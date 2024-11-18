@@ -1,7 +1,7 @@
 :root{
-    --topbar-items-spacing-x: 57px;
+    --topbar-items-spacing-x: 58px;
     --topbar-spacing-y: 6px;
-    --topbar-height: 48px;
+    --topbar-height: 45px;
 
 
     --navbar-spacing-y: 0px;
@@ -12,7 +12,7 @@
     --desktop-navigation-spacing-x: 59px;
 
 
-    --button-primary-padding-x: 36px;
+    --button-primary-padding-x: 38px;
     --button-primary-rounding: 10px;
     --button-primary-height: 60px;
 
@@ -67,6 +67,7 @@ header .desktop-navigation{
     flex-wrap: wrap;
     column-gap: var(--topbar-items-spacing-x);
     position: relative;
+    padding-top: 2px;
 }
 
 .topbar-navigation-link {
