@@ -959,6 +959,9 @@
 
     .progress-title{
         padding-right: 30px;
+        font-size: var(--fs-18);
+        line-height: 18px;
+        min-width: 180px;
     }
 
     .progress-item-inner{
@@ -976,6 +979,7 @@
 
     .progress-container{
         max-width: 500px;
+        margin-top: 7px;
     }
 
     .progress-title-wrapper{
@@ -983,14 +987,47 @@
         justify-content: flex-end;
     }
 
+    .progress-item{
+        position: relative;
+    }
+
     .progress-title-with-logo p{
-        display: none;
+        position: absolute;
+        left: 47%;
+        top: 10px;
+        transform: translateX(-50%);
+        font-size: 20px;
     }
 
     .progress-title-with-logo img {
         min-width: 213px;
         /* margin-bottom: 10px; */
+        margin-top: 6px;
+        padding-left: 3px;
+        margin-right: 22px;
     }
+
+    .progress-title{
+        margin-bottom: 0px;
+    }
+
+    .progress-item{
+        margin-bottom: 32px;
+    }
+
+    .progress-item:nth-of-type(1){
+        order: -1;
+        margin-bottom: 14px;
+    }
+
+    .progress-item:nth-of-type(1) .progress-container{
+        margin-top: 18px;
+    }
+
+    .progress-item:nth-of-type(6){
+        order: -1;
+    }
+    
 
     /* .progress-container{
         margin-left: 50px;
@@ -1007,7 +1044,7 @@
     padding-left: 40px;
     padding-right: 40px;
     color: white;
-    margin-top: var(--section-spacing-y);
+    margin-top: 62px;
 }
 
 .newsletter-section-title {
@@ -1024,7 +1061,7 @@
 }
 
 .newsletter-section .btn {
-    max-width: 290px;
+    max-width: 288px;
     width: 100%;
     margin: auto;
 }
@@ -1039,6 +1076,7 @@
     .newsletter-cta-group {
         flex-direction: row;
         justify-content: center;
+        margin-left: -5px;
     }
 
     .newsletter-cta-group .btn{
@@ -1047,13 +1085,17 @@
 
     .newsletter-section-title{
         font-size: 54px;
-        margin-top: -8px;
+        margin-top: -10px;
+        margin-bottom: 44px;
+        margin-left: -5px;
     }
 
     .newsletter-content-description{
         font-size: 22px;
         font-weight: 500;
         line-height: 36px;
+        margin-left: -5px;
+        margin-bottom: 28px;
     }
 
     .newsletter-cta-group .btn {
@@ -1065,9 +1107,6 @@
         padding: 0px;
     }
 
-    .newsletter-section-title{
-        margin-bottom: 44px;
-    }
 }
 
 
