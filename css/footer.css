@@ -208,6 +208,11 @@ footer a:hover {
 
 @media screen and (max-width: 1024px) {
 
+    .footer-socials {
+        padding-right: 0px;
+        padding-top: 4px;
+    }
+
     .footer-right-top, .footer-right-top p{
         text-align: center;
     }

@@ -78,6 +78,7 @@
     padding: 10px;
 }
 
+
 @media screen and (min-width : 1023px) {
     .hero-column-right {
         position: relative;
@@ -98,7 +99,7 @@
         height: 3465px;
         top: 50%;
         transform: translateY(-50%);
-        right: -76px;
+        right: -69px;
     }
 
     .hero-column-right img {
@@ -180,7 +181,6 @@
     padding-right: 30px;
     display: flex;
     column-gap: 48px;
-    flex-wrap: wrap;
 }
 
 .calendar-card-title {
@@ -383,10 +383,6 @@
     margin-top: var(--section-spacing-y);
 }
 
-.tab-header-slider {
-    padding-right: 100px;
-}
-
 .tab-header-slider .slick-arrow {
     position: absolute;
     top: 55%;
@@ -398,11 +394,10 @@
     right: 5px;
 }
 
-.tabheaderslider-prev {
-    left: -25px;
-}
+
 
 .tab-header-slider .tabheaderslider-prev {
+    top: 45%;
     transform: translateY(-50%) rotate(180deg);
     z-index: 10;
 }
@@ -414,8 +409,14 @@
 
 }
 
-.tab-header-slider .slick-track {
-    padding-left: 20px;
+@media screen and (min-width : 1023px) {
+    .tab-header-slider .slick-track {
+        padding-left: 20px;
+    }
+
+    .tabheaderslider-prev {
+        left: -25px;
+    }
 }
 
 .slider .slick-arrow::before {
@@ -568,6 +569,11 @@
 
 
 @media screen and (min-width : 1023px) {
+
+    .tab-header-slider {
+        padding-right: 100px;
+    }
+
     .tab-slider-section .container {
         padding: 0px;
     }
@@ -605,6 +611,16 @@
     }
 }
 
+
+@media screen and (max-width : 1024px) {
+    .slider .slick-arrow::before {
+        display: none;
+    }
+
+    .slide-item{
+        margin: 0px;
+    }
+}
 
 /* Content one section */
 .content-one-section {
@@ -649,6 +665,12 @@
     height: 100%;
     max-height: 450px;
     object-fit: cover;
+}
+
+@media screen and (max-width : 1024px) {
+    .content-one-section{
+        margin-top: 150px;
+    }
 }
 
 @media screen and (min-width : 1023px) {
@@ -1185,7 +1207,11 @@
     opacity: 1;
 }
 
-
+@media screen and (max-width : 1024px) {
+    .bottom-slider .slick-track {
+        margin: 0px;        
+    }
+}
 
 /* Stepper Form */
 
@@ -1383,4 +1409,12 @@ body::after {
     transform: translateX(-50%);
     width: 1px;
     background-color: red;
+}
+
+@media screen and (max-width : 1200px) {
+    body .container{
+        padding-left: var(--container-spacing-x) !important;
+        padding-right: var(--container-spacing-x) !important;
+    }
+    
 }

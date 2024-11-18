@@ -41,8 +41,10 @@ header {
     position: relative;
 }
 
-header .desktop-navigation-link{
-    margin-top: -10px;
+@media screen and (min-width: 1023px) {
+    header .desktop-navigation-link{
+        margin-top: -10px;
+    }
 }
 
 header .desktop-navigation{
@@ -418,7 +420,6 @@ header .desktop-navigation{
 
     .desktop-navigation-item,
     .desktop-navigation-link {
-        display: block;
         width: 100%;
         font-size: var(--fs-16);
         display: flex;
