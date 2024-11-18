@@ -161,11 +161,13 @@ $(document).ready(function () {
 
     $(`#tab1 .slider`).slick(sliderOptions)
     $(`.bottom-slider`).slick({
-        slidesToShow: 6,
+        slidesToShow: 5,
         slidesToScroll: 1,
-        infinite: false,
+        infinite: true,
         arrows: true,
         dots: false,
+        prevArrow: '<button class="bottom-slider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="bottom-slider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 768,

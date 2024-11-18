@@ -1072,6 +1072,9 @@
 
 
 /* Bottom Slider */
+.bottom-slider .slick-track{
+    margin-left: -190px;
+}
 
 .bottom-slide{
     height: 245px;
@@ -1095,8 +1098,17 @@
 .bottom-slider .slick-arrow {
     position: absolute;
     background-color: black;
-    top: 0px;
-    left: 0px;
+}
+
+.bottom-slider .slick-arrow{
+    top: 51%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    max-width: 30px;
+}
+
+.bottom-slider .bottom-slider-next{
+    right: 58px !important;
 }
 
 .bottom-slide {
