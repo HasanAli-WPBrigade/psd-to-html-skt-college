@@ -1,16 +1,16 @@
-const mobileNavToggle = document.querySelector(".mobile-nav-toggle")
-const mobileSearchToggle = document.querySelector(".mobile-search-toggle")
-const navbarNav = document.querySelector(".navbar-nav")
-const dropdownToggles = document.querySelectorAll(".has-dropdown")
-const mobileSearchbarWrapper = document.querySelector(".mobile-search-wrapper")
-const searchBtn = document.querySelector(".search-wrapper")
-const searchContainer = document.querySelector(".searchbar-container-wrapper")
-const offcanvas = document.querySelector('.offcanvas');
-const backdrop = document.querySelector('.offcanvas-backdrop');
-const formContent = document.querySelector('.form-content');
-const thankYouContent = document.querySelector('.thank-you-content');
-const contactFormOpenBtn = document.querySelector('#contact-form-button')
-const closeCanvasBtn = document.querySelector(".offcanvas-close")
+const mobileNavToggle = document.querySelector(".skt-mobile-nav-toggle")
+const mobileSearchToggle = document.querySelector(".skt-mobile-search-toggle")
+const navbarNav = document.querySelector(".skt-navbar-nav")
+const dropdownToggles = document.querySelectorAll(".skt-has-dropdown")
+const mobileSearchbarWrapper = document.querySelector(".skt-mobile-search-wrapper")
+const searchBtn = document.querySelector(".skt-search-wrapper")
+const searchContainer = document.querySelector(".skt-searchbar-container-wrapper")
+const offcanvas = document.querySelector('.skt-offcanvas');
+const backdrop = document.querySelector('.skt-offcanvas-backdrop');
+const formContent = document.querySelector('.skt-form-content');
+const thankYouContent = document.querySelector('.skt-thank-you-content');
+const contactFormOpenBtn = document.querySelector('#skt-contact-form-button')
+const closeCanvasBtn = document.querySelector(".skt-offcanvas-close")
 const contactForm = document.querySelector("#requestForm")
 
 contactForm.addEventListener('submit', e => {
@@ -30,36 +30,36 @@ contactFormOpenBtn.addEventListener('click', e => {
 
 
 searchBtn.addEventListener('click', () => {
-    if (searchContainer.classList.contains("show")) {
-        searchContainer.classList.remove("show")
+    if (searchContainer.classList.contains("skt-show")) {
+        searchContainer.classList.remove("skt-show")
     } else {
-        searchContainer.classList.add("show")
+        searchContainer.classList.add("skt-show")
     }
 })
 
 document.addEventListener('click', e => {
-    if (searchContainer.classList.contains("show") && !searchBtn.contains(e.target) && !searchContainer.contains(e.target)) {
-        searchContainer.classList.remove("show")
+    if (searchContainer.classList.contains("skt-show") && !searchBtn.contains(e.target) && !searchContainer.contains(e.target)) {
+        searchContainer.classList.remove("skt-show")
     }
 })
 
 
 mobileNavToggle.addEventListener('click', () => {
-    if (navbarNav.classList.contains("show")) {
-        navbarNav.classList.remove("show")
+    if (navbarNav.classList.contains("skt-show")) {
+        navbarNav.classList.remove("skt-show")
         mobileNavToggle.querySelector("img").src = "./images/icons/menu.svg"
     } else {
-        navbarNav.classList.add("show")
+        navbarNav.classList.add("skt-show")
         mobileNavToggle.querySelector("img").src = "./images/icons/menu-close.svg"
     }
 })
 
 mobileSearchToggle.addEventListener('click', () => {
-    if (mobileSearchbarWrapper.classList.contains("show")) {
-        mobileSearchbarWrapper.classList.remove("show")
+    if (mobileSearchbarWrapper.classList.contains("skt-show")) {
+        mobileSearchbarWrapper.classList.remove("skt-show")
         mobileSearchToggle.querySelector("img").src = "./images/icons/search-dark.svg"
     } else {
-        mobileSearchbarWrapper.classList.add("show")
+        mobileSearchbarWrapper.classList.add("skt-show")
         mobileSearchToggle.querySelector("img").src = "./images/icons/menu-close.svg"
     }
 })
@@ -68,14 +68,14 @@ dropdownToggles.forEach(button => {
     button.addEventListener('click', e => {
         e.preventDefault()
         e.stopPropagation()
-        const dropdown = e.target.querySelector(".dropdown")
+        const dropdown = e.target.querySelector(".skt-dropdown")
         if (dropdown) {
-            if (dropdown.classList.contains("show")) {
-                dropdown.classList.remove("show")
-                button.classList.remove("active")
+            if (dropdown.classList.contains("skt-show")) {
+                dropdown.classList.remove("skt-show")
+                button.classList.remove("skt-active")
             } else {
-                button.classList.add("active")
-                dropdown.classList.add("show")
+                button.classList.add("skt-active")
+                dropdown.classList.add("skt-show")
             }
         }
     })
@@ -84,26 +84,26 @@ dropdownToggles.forEach(button => {
 
 setupAccordion()
 function setupAccordion() {
-    const items = document.querySelectorAll('.accordion-item');
+    const items = document.querySelectorAll('.skt-accordion-item');
     items.forEach((accordionItem, index) => {
-        accordionItem.querySelector('.accordion-header').addEventListener('click', () => toggleAccordion(index));
+        accordionItem.querySelector('.skt-accordion-header').addEventListener('click', () => toggleAccordion(index));
     })
 }
 
 function toggleAccordion(index) {
-    const items = document.querySelectorAll('.accordion-item');
+    const items = document.querySelectorAll('.skt-accordion-item');
     // const content = items[index].querySelector('.accordion-content');
 
     const currentItem = items[index]
     // Toggle the display of the clicked section
-    if (currentItem.classList.contains("expanded")) {
-        currentItem.classList.remove("expanded")
+    if (currentItem.classList.contains("skt-expanded")) {
+        currentItem.classList.remove("skt-expanded")
     } else {
-        currentItem.classList.add("expanded")
+        currentItem.classList.add("skt-expanded")
     }
 }
 
-const tabLinks = document.querySelectorAll('.tab-slider-section .tab-link')
+const tabLinks = document.querySelectorAll('.skt-tab-slider-section .skt-tab-link')
 tabLinks.forEach(tabLink => {
     tabLink.addEventListener('click', e => {
         openTab(e, tabLink.dataset.tab)
@@ -113,30 +113,30 @@ tabLinks.forEach(tabLink => {
 function openTab(event, tabId) {
 
     // Hide all tab content
-    const tabContent = document.querySelectorAll(".tab-pane");
-    tabContent.forEach(tab => tab.classList.remove("active"));
+    const tabContent = document.querySelectorAll(".skt-tab-pane");
+    tabContent.forEach(tab => tab.classList.remove("skt-active"));
 
     // Remove the active class from all tab links
-    const tabLinks = document.querySelectorAll(".tab-link");
-    tabLinks.forEach(link => link.classList.remove("active"));
+    const tabLinks = document.querySelectorAll(".skt-tab-link");
+    tabLinks.forEach(link => link.classList.remove("skt-active"));
 
     // Show the current tab content and add the active class to the clicked tab link
-    document.getElementById(tabId).classList.add("active");
-    event.currentTarget.classList.add("active");
+    document.getElementById(tabId).classList.add("skt-active");
+    event.currentTarget.classList.add("skt-active");
 
 
 }
 
 
 $(document).ready(function () {
-    $('.tab-header-slider').slick({
+    $('.skt-tab-header-slider').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
         infinite: false,
         arrows: true,
         dots: false,
-        prevArrow: '<button class="tabheaderslider-prev"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Previous"></button>',
-        nextArrow: '<button class="tabheaderslider-next"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Next"></button>',
+        prevArrow: '<button class="skt-tabheaderslider-prev"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="skt-tabheaderslider-next"><img src="./images/icons/tablink-slider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -159,8 +159,8 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         dots: true,
-        prevArrow: '<button class="tabslider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
-        nextArrow: '<button class="tabslider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
+        prevArrow: '<button class="skt-tabslider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="skt-tabslider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -177,16 +177,16 @@ $(document).ready(function () {
         ]
     }
 
-    $(".slider").slick(sliderOptions)
+    $(".skt-slider").slick(sliderOptions)
 
-    $(`.bottom-slider`).slick({
+    $(`.skt-bottom-slider`).slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
         dots: false,
-        prevArrow: '<button class="bottom-slider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
-        nextArrow: '<button class="bottom-slider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
+        prevArrow: '<button class="skt-bottom-slider-prev"><img src="./images/icons/tabslider-arrow-right.svg" alt="Previous"></button>',
+        nextArrow: '<button class="skt-bottom-slider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
                 breakpoint: 1024,
@@ -221,28 +221,28 @@ $(document).ready(function () {
 
 
 function openOffcanvas() {
-    offcanvas.classList.add('show');
-    backdrop.classList.add('show');
+    offcanvas.classList.add('skt-show');
+    backdrop.classList.add('skt-show');
     document.body.style.overflow = 'hidden';
     // Reset form state when opening
     showForm();
 }
 
 function closeOffcanvas() {
-    offcanvas.classList.remove('show');
-    backdrop.classList.remove('show');
+    offcanvas.classList.remove('skt-show');
+    backdrop.classList.remove('skt-show');
     document.body.style.overflow = '';
 }
 
 function showForm() {
-    formContent.classList.remove('hide');
-    thankYouContent.classList.add('hide');
+    formContent.classList.remove('skt-hide');
+    thankYouContent.classList.add('skt-hide');
     document.getElementById('requestForm').reset();
 }
 
 function showThankYou() {
-    formContent.classList.add('hide');
-    thankYouContent.classList.remove('hide');
+    formContent.classList.add('skt-hide');
+    thankYouContent.classList.remove('skt-hide');
 }
 
 // Close offcanvas when clicking backdrop
@@ -250,7 +250,7 @@ backdrop.addEventListener('click', closeOffcanvas);
 
 // Close offcanvas when pressing Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && offcanvas.classList.contains('show')) {
+    if (e.key === 'Escape' && offcanvas.classList.contains('skt-show')) {
         closeOffcanvas();
     }
 });

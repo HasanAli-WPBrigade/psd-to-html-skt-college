@@ -16,40 +16,40 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.footer-top {
+.skt-footer-top {
     display: grid;
     grid-template-columns: 1fr 670px;
 }
 
-.footer-logo {
+.skt-footer-logo {
     max-width: 215px;
     width: 100%;
     margin-bottom: 19px;
 }
 
-.footer-navigation-list{
+.skt-footer-navigation-list{
     margin-top: -9px;
 }
 
-.footer-navigation-list li {
+.skt-footer-navigation-list li {
     margin-bottom: 7px;
 }
 
-.footer-about h3 {
+.skt-footer-about h3 {
     color: var(--color-dark-text);
     font-size: var(--fs-15);
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.footer-about-info {
+.skt-footer-about-info {
     display: flex;
     flex-direction: column;
     row-gap: 6px;
     max-width: 280px;
 }
 
-.footer-about-info li {
+.skt-footer-about-info li {
     display: flex;
     align-items: flex-start;
     column-gap: 12px;
@@ -59,83 +59,83 @@ footer a:hover {
     margin-top: 3px;
 }
 
-.footer-about-info li img {
+.skt-footer-about-info li img {
     margin-top: 5px;
     width: 16px;
     height: 16px;
 }
 
-.footer-right-top{
+.skt-footer-right-top{
     text-align: right;
 }
 
-.footer-right-top p {
+.skt-footer-right-top p {
     font-size: var(--fs-13);
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.footer-right-top img {
+.skt-footer-right-top img {
     width: 100%;
     max-width: 580px;
 }
 
-.footer-right-bottom {
+.skt-footer-right-bottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.footer-navigation-link {
+.skt-footer-navigation-link {
     font-size: var(--fs-15);
     font-weight: 500;
 }
 
-.footer-separator {
+.skt-footer-separator {
     border: none;
     border-bottom: 1px solid #9EB2BD;
     margin-top: 27px;
     margin-bottom: 40px;
 }
 
-.footer-copyright p {
+.skt-footer-copyright p {
     font-size: var(--fs-13);
     font-weight: 500;
 }
 
-.footer-bottom {
+.skt-footer-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.footer-secondary-list {
+.skt-footer-secondary-list {
     display: flex;
     flex-wrap: wrap;
     row-gap: 10px;
     margin-top: 7px;
 }
 
-.footer-secondary-list-link {
+.skt-footer-secondary-list-link {
     display: inline-block;
     font-size: var(--fs-13);
     font-weight: 500;
 }
 
-.footer-secondary-list-item+.footer-secondary-list-item {
+.skt-footer-secondary-list-item+.skt-footer-secondary-list-item {
     margin-left: 14px;
     padding-left: 16px;
     border-left: 1px solid var(--color-dark-text);
 }
 
-.footer-social-list {
+.skt-footer-social-list {
     display: flex;
     flex-wrap: wrap;
     gap: 41px;
 }
 
-.footer-social-tooltip {
+.skt-footer-social-tooltip {
     position: absolute;
     top: -40px;
     left: 50%;
@@ -151,7 +151,7 @@ footer a:hover {
     border-radius: 5px;
 }
 
-.footer-social-tooltip::after{
+.skt-footer-social-tooltip::after{
     content: "";
     width: 10px;
     height: 10px;
@@ -163,44 +163,44 @@ footer a:hover {
     z-index: -1;
 }
 
-.footer-social-link {
+.skt-footer-social-link {
     position: relative;
     display: inline-block;
     z-index: 1;
 }
 
-.footer-social-tooltip{
+.skt-footer-social-tooltip{
     display: none;
 }
 
-.footer-social-link:hover .footer-social-tooltip{
+.skt-footer-social-link:hover .skt-footer-social-tooltip{
     display: flex;
 }
 
-.footer-right-bottom{
+.skt-footer-right-bottom{
     margin-top: 40px;
 }
 
-.footer-about-info li.cta {
+.skt-footer-about-info li.skt-cta {
     display: none;
 }
 
-.footer-navigation-wrapper.mobile{
+.skt-footer-navigation-wrapper.skt-mobile{
     display: none;
 }
 
-.footer-socials {
+.skt-footer-socials {
     padding-right: 45px;
     padding-top: 4px;
 }
 
-.footer-navigation-wrapper:nth-of-type(1){
+.skt-footer-navigation-wrapper:nth-of-type(1){
     margin-right: 10px;
 }
 
 
 @media screen and (max-width: 1300px) {
-    .footer-social-tooltip {
+    .skt-footer-social-tooltip {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -208,78 +208,78 @@ footer a:hover {
 
 @media screen and (max-width: 1024px) {
 
-    .footer-socials {
+    .skt-footer-socials {
         padding-right: 0px;
         padding-top: 4px;
     }
 
-    .footer-right-top, .footer-right-top p{
+    .skt-footer-right-top, .skt-footer-right-top p{
         text-align: center;
     }
 
-    .footer-right-bottom{
+    .skt-footer-right-bottom{
         justify-content: center;
         flex-wrap: wrap;
     }
     
-    .footer-navigation-list{
+    .skt-footer-navigation-list{
         display: flex;
         flex-wrap: wrap;
         row-gap: 5px;
         justify-content: center;
     }
 
-    .footer-navigation-wrapper{
+    .skt-footer-navigation-wrapper{
         display: none;
     }
 
-    .footer-navigation-wrapper.mobile{
+    .skt-footer-navigation-wrapper.skt-mobile{
         display: block;
     }
     
-    .footer-navigation-item + .footer-navigation-item{
+    .skt-footer-navigation-item + .skt-footer-navigation-item{
         border-left : 1px solid var(--color-dark-text);
         padding-left: 20px;
         margin-left: 10px;
     }
 
-    .footer-about-info img{
+    .skt-footer-about-info img{
         display: none;
     }
 
-    .footer-about-info li{
+    .skt-footer-about-info li{
         justify-content: center;
         text-align: center;
     }
 
-    .footer-top {
+    .skt-footer-top {
         grid-template-columns: 1fr;
         row-gap: 30px;
         place-items: center;
     }
-    .footer-about-info{
+    .skt-footer-about-info{
         max-width: 100%;
     }
 
-    .footer-column-left{
+    .skt-footer-column-left{
         text-align: center;
     }
 
-    .footer-about-info li.email {
+    .skt-footer-about-info li.skt-email {
         display: none;
     }
     
-    .footer-about-info li.cta {
+    .skt-footer-about-info li.skt-cta {
         display: block;
     }
     
 
-    .footer-bottom{
+    .skt-footer-bottom{
         flex-direction: column-reverse;
         align-items: center;
     }
 
-    .footer-secondary-list{
+    .skt-footer-secondary-list{
         justify-content: center;
     }
 }
@@ -287,16 +287,16 @@ footer a:hover {
 @media screen and (max-width: 576px) {}
 
 @media screen and (min-width: 1023px) {
-    footer .container{
+    footer .skt-container{
         padding: 0px;
     }
 
-    .footer-right-top p {
+    .skt-footer-right-top p {
         padding-right: 12px;
         padding-top: 3px;
     }
 
-    .footer-right-top img {
+    .skt-footer-right-top img {
         padding-right: 3px;
     }
 }
