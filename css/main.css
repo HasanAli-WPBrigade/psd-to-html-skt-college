@@ -1320,6 +1320,12 @@ progress{
     opacity: 1;
 }
 
+.bottom-slide.slick-current .bottom-slide-content, .bottom-slide.slick-slide:not(.slick-active) .bottom-slide-content  {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 70%);
+    color: transparent;
+}
+
 @media screen and (max-width : 1024px) {
     .bottom-slider .slick-track {
         margin: 0px;        
