@@ -10,11 +10,24 @@ const backdrop = document.querySelector('.offcanvas-backdrop');
 const formContent = document.querySelector('.form-content');
 const thankYouContent = document.querySelector('.thank-you-content');
 const contactFormOpenBtn = document.querySelector('#contact-form-button')
+const closeCanvasBtn = document.querySelector(".offcanvas-close")
+const contactForm = document.querySelector("#requestForm")
+
+contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    showThankYou();
+})
+
+closeCanvasBtn.addEventListener('click', e => {
+    e.preventDefault()
+    closeOffcanvas()
+})
 
 contactFormOpenBtn.addEventListener('click', e => {
     e.preventDefault()
     openOffcanvas()
 })
+
 
 searchBtn.addEventListener('click', () => {
     if (searchContainer.classList.contains("show")) {
@@ -24,6 +37,13 @@ searchBtn.addEventListener('click', () => {
     }
 })
 
+document.addEventListener('click', e => {
+    if (searchContainer.classList.contains("show") && !searchBtn.contains(e.target) && !searchContainer.contains(e.target)) {
+        searchContainer.classList.remove("show")
+    }
+})
+
+
 mobileNavToggle.addEventListener('click', () => {
     if (navbarNav.classList.contains("show")) {
         navbarNav.classList.remove("show")
@@ -31,11 +51,6 @@ mobileNavToggle.addEventListener('click', () => {
     } else {
         navbarNav.classList.add("show")
         mobileNavToggle.querySelector("img").src = "./images/icons/menu-close.svg"
-    }
-
-    if (mobileSearchbarWrapper.classList.contains("show")) {
-        mobileSearchbarWrapper.classList.remove("show")
-        mobileSearchToggle.querySelector("img").src = "./images/icons/search-dark.svg"
     }
 })
 
@@ -46,11 +61,6 @@ mobileSearchToggle.addEventListener('click', () => {
     } else {
         mobileSearchbarWrapper.classList.add("show")
         mobileSearchToggle.querySelector("img").src = "./images/icons/menu-close.svg"
-    }
-
-    if (navbarNav.classList.contains("show")) {
-        navbarNav.classList.remove("show")
-        mobileNavToggle.querySelector("img").src = "./images/icons/menu.svg"
     }
 })
 
@@ -224,11 +234,6 @@ function showForm() {
 function showThankYou() {
     formContent.classList.add('hide');
     thankYouContent.classList.remove('hide');
-}
-
-function handleSubmit(event) {
-    event.preventDefault();
-    showThankYou();
 }
 
 // Close offcanvas when clicking backdrop
