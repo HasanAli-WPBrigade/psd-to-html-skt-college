@@ -81,6 +81,15 @@ dropdownToggles.forEach(button => {
     })
 })
 
+
+setupAccordion()
+function setupAccordion() {
+    const items = document.querySelectorAll('.accordion-item');
+    items.forEach((accordionItem, index) => {
+        accordionItem.querySelector('.accordion-header').addEventListener('click', () => toggleAccordion(index));
+    })
+}
+
 function toggleAccordion(index) {
     const items = document.querySelectorAll('.accordion-item');
     // const content = items[index].querySelector('.accordion-content');
@@ -103,8 +112,6 @@ tabLinks.forEach(tabLink => {
 
 function openTab(event, tabId) {
 
-
-
     // Hide all tab content
     const tabContent = document.querySelectorAll(".tab-pane");
     tabContent.forEach(tab => tab.classList.remove("active"));
@@ -116,6 +123,7 @@ function openTab(event, tabId) {
     // Show the current tab content and add the active class to the clicked tab link
     document.getElementById(tabId).classList.add("active");
     event.currentTarget.classList.add("active");
+
 
 }
 
@@ -169,7 +177,8 @@ $(document).ready(function () {
         ]
     }
 
-    $(`#tab1 .slider`).slick(sliderOptions)
+    $(".slider").slick(sliderOptions)
+
     $(`.bottom-slider`).slick({
         slidesToShow: 5,
         slidesToScroll: 1,

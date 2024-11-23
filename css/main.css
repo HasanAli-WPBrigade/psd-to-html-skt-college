@@ -1,6 +1,8 @@
 :root {
     /* On Mobile Screen */
     --section-spacing-y: 50px;
+
+    --calendar-card-border :  1px solid #E1E7EB;
 }
 
 @media screen and (min-width : 1023px) {
@@ -150,8 +152,13 @@
     .hero-content-body {
         position: relative;
         z-index: 4;
-        padding-top: 128px;
+        padding-top: 50px;
         padding-bottom: 64px;
+    }
+
+    .hero-column-left{
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -162,26 +169,34 @@
 
 .calender-card {
     border-radius: 10px;
-    border-bottom: none;
-    border: 1px solid #E1E7EB;
 }
 
 .calendar-card-header {
-    border-bottom: 1px solid #E1E7EB;
+    border: var(--calendar-card-border);
     padding-top: 28px;
     padding-bottom: 24px;
     padding-left: 30px;
     padding-right: 30px;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .calendar-card-item {
-    border-bottom: 1px solid #E1E7EB;
+    border: var(--calendar-card-border);
+    border-top: none;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
     column-gap: 48px;
+}
+
+@media screen and (max-width : 370px) {
+    .calendar-card-item{
+        flex-direction: column;
+    }
 }
 
 .calendar-card-title {
@@ -225,6 +240,7 @@
     border-radius: 5px;
     min-height: 50px;
 }
+
 
 @media screen and (min-width : 1023px) {
     .calendar-card-footer {
@@ -275,9 +291,14 @@
 
 .faq-section {
     margin-top: var(--section-spacing-y);
-    background-color: rgba(23, 41, 51, 10%);
     padding-top: var(--section-spacing-y);
     padding-bottom: calc(var(--section-spacing-y) - 5px);
+}
+
+@media screen and (min-width : 1023px) {
+    .faq-section{
+        background-color: rgba(23, 41, 51, 10%);
+    }
 }
 
 .faq-section-title {
@@ -315,7 +336,40 @@
     font-size: 18px;
     transition: background-color 0.3s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 10%);
+    position: relative;
 }
+
+.accordion-header::after {
+    content: "";
+    mask-image: url(../images/icons/chevron-down.svg);
+    -webkit-mask-image: url(../images/icons/chevron-down.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    background-color: var(--color-dark); /* Default color */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 19px;
+}
+
+.accordion-header:hover::after {
+    background-color: white; /* Hover color */
+}
+
+.accordion-item.expanded .accordion-header::after {
+    content: "";
+    mask-image: url(../images/icons/chevron-up.svg);
+    -webkit-mask-image: url(../images/icons/chevron-up.svg);
+    background-color: white; /* Hover color */
+}
+
+
 
 .accordion-header h2 {
     font-size: var(--fs-16);
@@ -485,16 +539,30 @@
     font-weight: 400;
 }
 
+.tab-link{
+    white-space: nowrap;
+}
+
 .tab-link.active {
     color: #172933;
 }
 
-.tab-pane {
-    display: none;
+.tab-pane{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
 }
 
 .tab-pane.active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    /* height: 100%; */
+    /* display: block; */
+}
+
+.tab-pane:not(.active){
+    height: 0px;
 }
 
 .slide-item {
@@ -642,7 +710,6 @@
 }
 
 .content-one-container-inner {
-    max-width: 650px;
     margin-right: auto;
 }
 
@@ -664,7 +731,7 @@
 .content-one-image {
     width: 100%;
     height: 100%;
-    max-height: 450px;
+    max-height: 250px;
     object-fit: cover;
 }
 
@@ -683,6 +750,15 @@
 
     .content-one-image-wrapper {
         flex: 1;
+        background-image: url(../images/info-section-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+        min-height: 449px;       
+    }
+
+    .content-one-image-wrapper > img {
+        display: none;
     }
 
     .content-one-container {
@@ -694,8 +770,9 @@
     .content-one-container-inner {
         /* padding-top: 90px;
         padding-bottom: 90px; */
+        max-width: 650px;
         margin-left: 100px;
-        /* padding-right: 100px; */
+        margin-right: 100px;
     }
 
     .content-one-title {
@@ -711,7 +788,7 @@
         line-height: 26px;
         padding-left: 0px;
         padding-right: 0px;
-        max-width: 554px;
+        max-width: 560px;
     }
 
 }
@@ -822,8 +899,13 @@
     font-weight: 500;
     margin-bottom: 16px;
     line-height: 26px;
-    max-width: 330px;
     margin-top: -3px;
+}
+
+@media screen and (min-width : 1023px) {
+    .course-detail-description{
+        max-width: 330px;
+    }
 }
 
 .course-detail-cta {
@@ -854,6 +936,10 @@
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 15px;
+}
+
+.video-section-image{
+    object-fit: contain;
 }
 
 .video-section-content p:nth-of-type(1) {
@@ -920,20 +1006,33 @@
     margin-bottom: 30px;
 }
 
-.progress-container {
+progress{
     width: 100%;
-    background-color: #E1E7EB;
     border-radius: 8px;
-    overflow: hidden;
 }
 
-.progress-bar {
-    height: 16px;
+.progress-item-inner progress::-webkit-progress-bar {
+    width: 100%;
+    background-color: #E1E7EB;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.progress-item-inner progress::-webkit-progress-value {
     background-color: #172933;
     color: white;
     text-align: center;
     font-weight: bold;
-    border-radius: 5px 0 0 5px;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.progress-item-inner progress::-moz-progress-bar {
+    background-color: #172933;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
     transition: width 0.3s ease;
 }
 
