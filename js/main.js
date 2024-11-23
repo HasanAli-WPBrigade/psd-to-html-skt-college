@@ -189,13 +189,13 @@ $(document).ready(function () {
         nextArrow: '<button class="bottom-slider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                 }
