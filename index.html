@@ -62,10 +62,12 @@
                         <div class="searchbar-container">
                             <h3 class="searchbar-title">Search</h3>
                             <p class="searchbar-subtitle">Lörem ipsum antipöskapet treheten </p>
-                            <form action="">
-                                <input type="search" placeholder="Search" required class="searchbar-input">
-                                <button class="btn btn-primary">Kagt maska</button>
-                            </form>
+                            <search>
+                                <form action="/search">
+                                    <input type="search" placeholder="Search" required class="searchbar-input">
+                                    <button type="submit" class="btn btn-primary">Kagt maska</button>
+                                </form>
+                            </search>
                         </div>
                     </div>
                 </div>
@@ -224,14 +226,16 @@
                     </nav>
 
                     <div class="mobile-search-wrapper">
-                        <form action="/search">
-                            <div class="mobile-searchbar">
-                                <input type="search" required placeholder="Search" class="searchbar-input">
-                                <button class="mobile-searchbar-btn">
-                                    <img src="./images/icons/search-dark.svg" alt="search icon">
-                                </button>
-                            </div>
-                        </form>
+                        <search>
+                            <form action="/search">
+                                <div class="mobile-searchbar">
+                                    <input type="search" required placeholder="Search" class="searchbar-input">
+                                    <button type="submit" class="mobile-searchbar-btn">
+                                        <img src="./images/icons/search-dark.svg" alt="search icon">
+                                    </button>
+                                </div>
+                            </form>
+                        </search>
                         <button class="btn btn-primary w-100">
                             Kagt maska.
                         </button>
@@ -262,6 +266,7 @@
                 <form id="requestForm" action="/contact">
                     <div class="form-grid">
                         <div class="form-field">
+                            <label hidden for="campus">Campus</label>
                             <select id="campus" required>
                                 <option value="" disabled selected>Select Campus</option>
                                 <option value="campus1">Campus 1</option>
@@ -270,19 +275,23 @@
                         </div>
 
                         <div class="form-field">
+                            <label hidden for="date">Date</label>
                             <input type="date" id="date" required>
                         </div>
 
                         <div class="form-field">
+                            <label hidden for="firstName">First Name</label>
                             <input type="text" id="firstName" placeholder="First Name" required>
                         </div>
 
                         <div class="form-field">
+                            <label hidden for="lastName">Last Name</label>
                             <input type="text" id="lastName" placeholder="Last Name" required>
                         </div>
                     </div>
 
                     <div class="form-field">
+                        <label hidden for="email">Email</label>
                         <input type="email" id="email" placeholder="email@example.com" required>
                     </div>
 
