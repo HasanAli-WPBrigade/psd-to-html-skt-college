@@ -193,6 +193,18 @@ $(document).ready(function () {
         nextArrow: '<button class="skt-bottom-slider-next"><img src="./images/icons/tabslider-arrow-right.svg" alt="Next"></button>',
         responsive: [
             {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,

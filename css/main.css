@@ -851,6 +851,10 @@
     }
 }
 
+.skt-course-detail-list-item p, .skt-course-detail-list-item span {
+    white-space: nowrap;
+}
+
 @media screen and (max-width : 370px) {
     .skt-course-detail-list-item {
         flex-direction: column;
