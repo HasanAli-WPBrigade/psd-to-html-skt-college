@@ -207,21 +207,22 @@ $(document).ready(function () {
         ]
     })
 
-    $("[data-fancybox]").fancybox({
-        buttons: [
-            "close"
-        ],
-        youtube: {
-            controls: 1,
-            showinfo: 0
-        },
-        vimeo: {
-            color: "f00"
-        }
-    });
+});
 
+Fancybox.bind("[data-fancybox]", {
+    buttons: [
+        "close"
+    ],
+    youtube: {
+        controls: 1,
+        showinfo: 0
+    },
+    vimeo: {
+        color: "f00"
+    }
 
 });
+
 
 
 function openOffcanvas() {
