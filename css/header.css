@@ -214,13 +214,6 @@ header .skt-desktop-navigation {
     place-items: center;
 }
 
-.skt-site-logo::after {
-    content: attr(data-title);
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-
 .skt-navbar {
     display: flex;
     align-items: center;
@@ -327,7 +320,8 @@ header .skt-desktop-navigation {
     background-color: var(--dropdown-list-link-color-bg-hover);
 }
 
-.skt-desktop-navigation li.skt-has-dropdown:hover>.skt-dropdown {
+.skt-desktop-navigation li.skt-has-dropdown:hover>.skt-dropdown,
+.skt-desktop-navigation li.skt-has-dropdown:focus-within>.skt-dropdown {
     display: block;
 }
 
@@ -525,4 +519,10 @@ header .skt-desktop-navigation {
 
 input:focus {
     border: 1px solid var(--color-primary);
+}
+
+:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;                    
+    /* Moves the outline away from the element */
 }

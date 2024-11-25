@@ -32,7 +32,11 @@ contactFormOpenBtn.addEventListener('click', e => {
 searchBtn.addEventListener('click', () => {
     if (searchContainer.classList.contains("skt-show")) {
         searchContainer.classList.remove("skt-show")
+        searchContainer.ariaHidden = true
+        searchBtn.ariaExpanded = false
     } else {
+        searchBtn.ariaExpanded = true
+        searchContainer.ariaHidden = false
         searchContainer.classList.add("skt-show")
     }
 })
