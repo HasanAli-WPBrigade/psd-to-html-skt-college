@@ -65,7 +65,7 @@
                             <search>
                                 <form action="/search">
                                     <input type="search" placeholder="Search" required class="skt-searchbar-input">
-                                    <button type="submit" class="skt-btn btn-primary">Kagt maska</button>
+                                    <button type="submit" class="skt-btn skt-btn-primary">Kagt maska</button>
                                 </form>
                             </search>
                         </div>
@@ -81,11 +81,11 @@
                         <img src="./images/icons/menu.svg" alt="Menu Icon">
                     </a>
 
-                    <h1 data-title="Logo" class="skt-site-logo">
+                    <div data-title="Logo" class="skt-site-logo">
                         <a href="#">
                             <img class="skt-logo" src="./images/logo.svg" alt="Logo">
                         </a>
-                    </h1>
+                    </div>
 
                     <a href="#OpenMobileSearch" class="skt-mobile-search-toggle">
                         <img src="./images/icons/search-dark.svg" alt="Search Icon">
@@ -105,12 +105,12 @@
                                             NADAIOS krati
                                         </a>
                                     </li>
-                                    <li class="skt-dropdown-list-item has-dropdown">
+                                    <li class="skt-dropdown-list-item skt-has-dropdown">
                                         <a href="" class="skt-dropdown-list-link">
                                             Nettokrati
                                         </a>
                                         <!-- Second Level Dropdown -->
-                                        <ul class="skt-dropdown dropdown-list">
+                                        <ul class="skt-dropdown skt-dropdown-list">
                                             <li class="skt-dropdown-list-item">
                                                 <a href="" class="skt-dropdown-list-link">
                                                     Lörem ipsum foli krati
@@ -191,7 +191,7 @@
                                 </a>
                             </li>
                             <li class="skt-desktop-navigation-item">
-                                <a class="skt-btn btn-primary" id="skt-contact-form-button" href="#OpenContactForm">
+                                <a class="skt-btn skt-btn-primary" id="skt-contact-form-button" href="#OpenContactForm">
                                     Kagt maska.
                                 </a>
                             </li>
@@ -217,7 +217,7 @@
                                 <a class="skt-desktop-navigation-link" href="tel:8000000000">800-000-0000</a>
                             </li>
                             <li>
-                                <a class="skt-btn btn-primary w-100 text-center" href="">
+                                <a class="skt-btn skt-btn-primary skt-w-100 skt-text-center" href="">
                                     Kagt maska
                                 </a>
                             </li>
@@ -236,7 +236,7 @@
                                 </div>
                             </form>
                         </search>
-                        <button class="skt-btn btn-primary w-100">
+                        <button class="skt-btn skt-btn-primary w-100">
                             Kagt maska.
                         </button>
                     </div>
@@ -251,70 +251,78 @@
     <div class="skt-offcanvas-backdrop"></div>
 
     <!-- Offcanvas component -->
-    <div class="skt-offcanvas">
+    <aside class="skt-offcanvas skt-show">
         <div class="skt-offcanvas-header">
-            <h2 class="skt-offcanvas-title">Request Information Form</h2>
-            <button type="button" class="skt-offcanvas-close">×</button>
+            <button type="button" class="skt-offcanvas-close">
+                Close <img src="./images/icons/close-canvas.svg" alt="Close icon">
+            </button>
         </div>
         <div class="skt-offcanvas-body">
-            <!-- Form Content -->
-            <div class="skt-form-content">
-                <h3 class="skt-form-title">Lörem ipsum folig innan</h3>
-                <p class="skt-form-subtitle">Vaktig treskade rer til e-demokrati eurogånar i båbel år. Fåktig denera inte
-                    revis</p>
 
-                <form id="requestForm" action="/contact">
-                    <div class="skt-form-grid">
-                        <div class="skt-form-field">
-                            <label for="campus">Campus</label>
-                            <select id="skt-campus" required>
-                                <option value="" disabled selected>Select Campus</option>
-                                <option value="campus1">Campus 1</option>
-                                <option value="campus2">Campus 2</option>
-                            </select>
+            <div class="skt-offcanvas-container">
+                <!-- Form Content -->
+                <div  class="skt-form-content">
+                    <h2 class="skt-form-title">Request Information Form</h2>
+                    <h3 class="skt-form-heading">Lörem ipsum folig innan</h3>
+                    <p class="skt-form-subtitle">Vaktig treskade rer til e-demokrati eurogånar i båbel år. Fåktig denera inte revis</p>    
+                    <form id="requestForm" action="/contact">
+
+                        <div class="skt-form-fields">
+                            <div class="skt-form-grid">
+                                <div class="skt-form-field">
+                                    <label for="skt-campus">Campus</label>
+                                    <select id="skt-campus" required>
+                                        <option value="" disabled selected>Select Campus</option>
+                                        <option value="campus1">Campus 1</option>
+                                        <option value="campus2">Campus 2</option>
+                                    </select>
+                                </div>
+    
+                                <div class="skt-form-field">
+                                    <label for="skt-date">Date</label>
+                                    <input type="date" placeholder="Select Date" id="skt-date" required>
+                                </div>
+    
+                                <div class="skt-form-field">
+                                    <label for="skt-firstName">First Name</label>
+                                    <input type="text" id="skt-firstName" placeholder="First Name" required>
+                                </div>
+    
+                                <div class="skt-form-field">
+                                    <label for="skt-lastName">Last Name</label>
+                                    <input type="text" id="skt-lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+    
+                            <div class="skt-form-field">
+                                <label for="skt-email">Email</label>
+                                <input type="email" id="skt-email" placeholder="email@example.com" required>
+                            </div>
                         </div>
 
-                        <div class="skt-form-field">
-                            <label for="date">Date</label>
-                            <input type="date" placeholder="Select Date" id="skt-date" required>
-                        </div>
-
-                        <div class="skt-form-field">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="skt-firstName" placeholder="First Name" required>
-                        </div>
-
-                        <div class="skt-form-field">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="skt-lastName" placeholder="Last Name" required>
-                        </div>
-                    </div>
-
-                    <div class="skt-form-field">
-                        <label for="email">Email</label>
-                        <input type="email" id="skt-email" placeholder="email@example.com" required>
-                    </div>
-
-                    <button type="submit" class="skt-submit-btn">Kagt maska</button>
-                </form>
-            </div>
-
-            <!-- Thank You Content -->
-            <div class="skt-thank-you-content hide">
-                <div class="skt-success-icon">
-                    <span class="skt-checkmark">✓</span>
+                        <button type="submit" class="skt-btn skt-btn-primary">Kagt maska</button>
+                    </form>
                 </div>
 
-                <h2 class="skt-thank-you-title">Thank You!</h2>
+                <!-- Thank You Content -->
+                <div class="skt-thank-you-content hide">
+                    <h2 class="skt-form-title">Request Information Form</h2>
+                    <div class="skt-success-icon">
+                        <span class="skt-checkmark">✓</span>
+                    </div>
 
-                <p class="skt-thank-you-message">
-                    Thank you for your interest in Prima Medical Institute. A member of our team will be in contact with
-                    you very soon. We look forward to speaking with you.
-                </p>
+                    <h2 class="skt-thank-you-title">Thank You!</h2>
+
+                    <p class="skt-thank-you-message">
+                        Thank you for your interest in Prima Medical Institute. A member of our team will be in contact
+                        with
+                        you very soon. We look forward to speaking with you.
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+    </aside>
 
     <!-- Main Content -->
     <main>
@@ -327,9 +335,9 @@
                             <div class="skt-hero-column-left">
                                 <div class="skt-hero-content-container">
                                     <div class="skt-hero-content-body">
-                                        <h2 class="skt-hero-heading">
+                                        <h1 class="skt-hero-heading">
                                             Lörem ipsum folig nettokrati jag nyrad
-                                        </h2>
+                                        </h1>
                                         <p class="skt-hero-description">
                                             Lörem ipsum antipöskapet treheten fastän res infraren till preplakeling
                                             innan
@@ -1186,7 +1194,8 @@
                 <div class="skt-content-one-container">
                     <div class="skt-content-one-container-inner">
                         <h3 class="skt-content-one-title">Snippgympa homofaktig</h3>
-                        <p class="skt-content-one-description">Lörem ipsum antipöskapet treheten fastän res infraren till
+                        <p class="skt-content-one-description">Lörem ipsum antipöskapet treheten fastän res infraren
+                            till
                             preplakeling innan pare innan rera, sassa anapren. Vaktig treskade rer till e-demokrati
                             euroganar i böbel år. Faktig denera inte revis: innan spegt hosat bioligen. Valiga matisam
                             dinygt, medan gåsade i plalig hjärtslagslag om vuvuzela i terar regen suprakemi. Sanat nin
@@ -1263,7 +1272,8 @@
                         <h3 class="skt-course-detail-item-title">
                             Bröllopsklänning heterov
                         </h3>
-                        <p class="skt-course-detail-description">Lörem ipsum köttskatt åfade och prek att grindsamhälle då
+                        <p class="skt-course-detail-description">Lörem ipsum köttskatt åfade och prek att grindsamhälle
+                            då
                             friva fastän anteck. Dos fahabel, i
                             ress inte hänisk autode. Tres äna: fösm. Ihet tid. Kilingar bamynar: att pohåholigen. Mynade
                             nespeskapet egon då tetraren: parament hununade. Milig oledes, vittneslitteratur bior.
@@ -1279,7 +1289,8 @@
                         <h3 class="skt-course-detail-item-title">
                             Ultrans vulkanresa tirade
                         </h3>
-                        <p class="skt-course-detail-description">Lörem ipsum köttskatt åfade och prek att grindsamhälle då
+                        <p class="skt-course-detail-description">Lörem ipsum köttskatt åfade och prek att grindsamhälle
+                            då
                             friva fastän anteck. Dos fahabel, i
                             ress inte hänisk autode. Tres äna: fösm. Ihet tid. Kilingar bamynar: att pohåholigen. Mynade
                             nespeskapet egon då tetraren: parament hununade. Milig oledes, vittneslitteratur bior.
@@ -1414,7 +1425,7 @@
                         </div>
                     </div>
 
-                    <div class="skt-accordion accordion-2">
+                    <div class="skt-accordion skt-accordion-2">
                         <div class="skt-accordion-item">
                             <div class="skt-accordion-header">
                                 <h2>Porttitor rhoncus dolor purus non</h2>
@@ -1568,7 +1579,8 @@
             <div class="skt-container skt-nner-container">
                 <div class="skt-newsletter-content-wrapper">
                     <h3 class="skt-newsletter-section-title">Tregåsa dogågisk </h3>
-                    <p class="skt-newsletter-content-description">Sit amet facilisis magna etiam. Porttitor rhoncus dolor
+                    <p class="skt-newsletter-content-description">Sit amet facilisis magna etiam. Porttitor rhoncus
+                        dolor
                         purus non enim praesent elementum facilisis. Est sit amet facilisis magna etiam. Facilisis
                         gravida neque convallis a cras semper. Duis tristique sollicitudin nibh sit amet. Vestibulum
                         morbi </p>
@@ -1751,17 +1763,8 @@
                             </ul>
                         </div>
 
-                        <div class="skt-footer-navigation-wrapper mobile">
+                        <div class="skt-footer-navigation-wrapper skt-mobile">
                             <ul class="skt-footer-navigation-list">
-                                <li class="skt-footer-navigation-item">
-                                    <a class="skt-footer-navigation-link" href="">Bloog</a>
-                                </li>
-                                <li class="skt-footer-navigation-item">
-                                    <a class="skt-footer-navigation-link" href="">Neque</a>
-                                </li>
-                                <li class="skt-footer-navigation-item">
-                                    <a class="skt-footer-navigation-link" href="">gravida neque</a>
-                                </li>
                                 <li class="skt-footer-navigation-item">
                                     <a class="skt-footer-navigation-link" href="">Storado</a>
                                 </li>
@@ -1770,6 +1773,15 @@
                                 </li>
                                 <li class="skt-footer-navigation-item">
                                     <a class="skt-footer-navigation-link" href="">Carir</a>
+                                </li>
+                                <li class="skt-footer-navigation-item">
+                                    <a class="skt-footer-navigation-link" href="">Bloog</a>
+                                </li>
+                                <li class="skt-footer-navigation-item">
+                                    <a class="skt-footer-navigation-link" href="">Neque</a>
+                                </li>
+                                <li class="skt-footer-navigation-item">
+                                    <a class="skt-footer-navigation-link" href="">gravida neque</a>
                                 </li>
                                 <li class="skt-footer-navigation-item">
                                     <a class="skt-footer-navigation-link" href="">&nbsp;Est sit amet facilisis magna
@@ -1808,7 +1820,8 @@
                         <li class="skt-footer-social-item">
                             <a href="" class="skt-footer-social-link">
                                 <span class="skt-footer-social-tooltip">Facebook</span>
-                                <img src="./images/icons/facebook.svg" alt="facebook icon" class="skt-footer-social-icon">
+                                <img src="./images/icons/facebook.svg" alt="facebook icon"
+                                    class="skt-footer-social-icon">
                             </a>
                         </li>
                         <li class="skt-footer-social-item">
@@ -1820,13 +1833,15 @@
                         <li class="skt-footer-social-item">
                             <a href="" class="skt-footer-social-link">
                                 <span class="skt-footer-social-tooltip">Linkedin</span>
-                                <img src="./images/icons/linkedIn.svg" alt="linkedin icon" class="skt-footer-social-icon">
+                                <img src="./images/icons/linkedIn.svg" alt="linkedin icon"
+                                    class="skt-footer-social-icon">
                             </a>
                         </li>
                         <li class="skt-footer-social-item">
                             <a href="" class="skt-footer-social-link">
                                 <span class="skt-footer-social-tooltip">Instagram</span>
-                                <img src="./images/icons/instagram.svg" alt="instagram icon" class="skt-footer-social-icon">
+                                <img src="./images/icons/instagram.svg" alt="instagram icon"
+                                    class="skt-footer-social-icon">
                             </a>
                         </li>
                         <li class="skt-footer-social-item">
