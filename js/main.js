@@ -127,8 +127,6 @@ function openTab(event, tabId) {
     // Show the current tab content and add the active class to the clicked tab link
     document.getElementById(tabId).classList.add("skt-active");
     event.currentTarget.classList.add("skt-active");
-
-
 }
 
 
