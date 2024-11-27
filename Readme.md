@@ -10,3 +10,5 @@ TODO
 9. Dont use heights on Buttons
 10. Dont use same classes on Parent and Child elements
 11. Always follow Desktop first approach
+12. Tooltip is not center aligned in Social Icons in footer
+13. Overflow hidden on mobile screen when a full screen popup is opened
