@@ -47,6 +47,7 @@
 
 .skt-hero-content-body {
     color: white;
+    padding: var(--container-spacing-x);
 }
 
 .skt-hero-heading {
@@ -80,11 +81,11 @@
     padding: 10px;
 }
 
-
-@media screen and (min-width : 1023px) {
+@media screen and (min-width : 1025px) {
     .skt-hero-column-right {
         position: relative;
         flex: 1;
+        background-color: var(--color-dark);
     }
 
     .skt-hero-column-left {
@@ -152,8 +153,9 @@
     .skt-hero-content-body {
         position: relative;
         z-index: 4;
-        padding-top: 50px;
-        padding-bottom: 64px;
+        padding: 50px 10px 64px 10px;
+        max-width: 790px;
+        margin-left: auto;
     }
 
     .skt-hero-column-left {

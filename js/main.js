@@ -47,14 +47,15 @@ document.addEventListener('click', e => {
     }
 })
 
-
 mobileNavToggle.addEventListener('click', () => {
     if (navbarNav.classList.contains("skt-show")) {
         navbarNav.classList.remove("skt-show")
         mobileNavToggle.querySelector("img").src = "./images/icons/menu.svg"
+        document.body.style.overflow  =  "auto"
     } else {
         navbarNav.classList.add("skt-show")
         mobileNavToggle.querySelector("img").src = "./images/icons/menu-close.svg"
+        document.body.style.overflow  =  "hidden"
     }
 })
 
@@ -62,9 +63,11 @@ mobileSearchToggle.addEventListener('click', () => {
     if (mobileSearchbarWrapper.classList.contains("skt-show")) {
         mobileSearchbarWrapper.classList.remove("skt-show")
         mobileSearchToggle.querySelector("img").src = "./images/icons/search-dark.svg"
+        document.body.style.overflow  =  "auto"
     } else {
         mobileSearchbarWrapper.classList.add("skt-show")
         mobileSearchToggle.querySelector("img").src = "./images/icons/menu-close.svg"
+        document.body.style.overflow  =  "hidden"
     }
 })
 

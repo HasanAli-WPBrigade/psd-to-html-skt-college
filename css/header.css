@@ -28,11 +28,6 @@ header {
     position: relative
 }
 
-@media screen and (min-width:1023px) {
-    header .skt-desktop-navigation-link {
-        margin-top: -10px
-    }
-}
 
 header .skt-desktop-navigation {
     column-gap: var(--desktop-navigation-spacing-x)
@@ -91,7 +86,7 @@ header .skt-desktop-navigation {
     right: 0
 }
 
-.skt-navbar-wrapper .skt-btn.skt-btn-primary{
+.skt-navbar-wrapper .skt-btn.skt-btn-primary {
     padding: 17px var(--button-primary-padding-x);
 }
 
@@ -121,8 +116,16 @@ header .skt-desktop-navigation {
     outline: 0;
     border: none;
     border-radius: var(--searchbar-container-rounding);
-    border-top: 1px solid;
-    font-size: var(--fs-16)
+    font-size: var(--fs-16);
+}
+
+.skt-searchbar-input:not(:focus),
+.skt-searchbar-input:not(:focus-visible) {
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 27.8%)
+}
+
+.skt-searchbar-input::placeholder {
+    color: #c2c2c2
 }
 
 .skt-desktop-navigation-link,
@@ -216,23 +219,22 @@ header .skt-desktop-navigation {
     justify-content: space-between
 }
 
-.skt-site-logo {
-    margin-right: 59px
-}
+
 
 .skt-desktop-navigation {
     display: flex;
     align-items: center;
     padding-top: var(--navbar-spacing-y);
     padding-bottom: var(--navbar-spacing-y);
-    min-height: var(--navbar-height);
+    /* min-height: var(--navbar-height); */
     flex-wrap: wrap;
     justify-content: space-between
 }
 
 .skt-mobile-navbar-separator {
     border: none;
-    border-bottom: 1px solid #e1e7eb
+    border-bottom: 1px solid #e1e7eb;
+    margin: 20px 0;
 }
 
 .skt-mobile-nav-toggle,
@@ -284,7 +286,7 @@ header .skt-desktop-navigation {
 
 .skt-desktop-navigation li.skt-has-dropdown:hover>a,
 .skt-dropdown-list-link:hover {
-    text-decoration: underline;    
+    text-decoration: underline;
     background-color: var(--dropdown-list-link-color-bg-hover);
 }
 
@@ -307,14 +309,20 @@ header .skt-desktop-navigation {
     user-select: none
 }
 
-@media screen and (min-width :1023px) {
-    .skt-desktop-navigation > .skt-has-dropdown > .skt-dropdown {
-        padding-top: 13px;
+.skt-btn.skt-btn-primary.skt-mobile {
+    border-radius: 0px;
+    display: none;
+    margin-top: auto;
+}
+
+@media screen and (min-width :1025px) {
+    .skt-site-logo {
+        margin-right: 59px
     }
 
     .skt-desktop-navigation-link {
-        padding: 30px 0
-    }    
+        padding: 38px 0
+    }
 
     .skt-desktop-navigation>.skt-has-dropdown::after {
         content: none;
@@ -338,10 +346,15 @@ header .skt-desktop-navigation {
         --desktop-navigation-item-height: 50px
     }
 
-    .skt-mobile-navigation-secondary .skt-btn.skt-btn-primary {
-        position: absolute;
-        bottom: 0;
-        border-radius: 0
+    .skt-btn.skt-btn-primary.skt-mobile{
+        display: block;
+    }
+
+    .skt-navbar-wrapper{
+        padding: var(--container-spacing-x) 0;
+    }
+    .skt-mobile-navigation-secondary{
+        margin: 0 0 20px 0px;
     }
 
     .skt-has-dropdown {
@@ -367,8 +380,8 @@ header .skt-desktop-navigation {
         display: none
     }
 
-    .skt-has-dropdown .skt-desktop-navigation-link {
-        min-height: var(--desktop-navigation-item-height)
+    .skt-desktop-navigation-link {
+        padding: 14px 0;
     }
 
     .skt-has-dropdown.skt-active>.skt-dropdown-list-link {
@@ -391,7 +404,7 @@ header .skt-desktop-navigation {
     }
 
     .skt-dropdown {
-        position: relative
+        position: static
     }
 
     .skt-dropdown.skt-show,
@@ -404,15 +417,21 @@ header .skt-desktop-navigation {
         display: block
     }
 
+    .skt-mobile-search-wrapper.skt-show,
+    .skt-navbar-nav.skt-show {
+        display: flex;
+        flex-direction: column;
+    }
+
     .skt-navbar-nav {
-        min-height: calc(100vh - var(--navbar-height));
-        padding-bottom: 60px;
+        height: calc(100vh - 96px);
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         display: none;
-        background-color: #fff
+        background-color: #fff;
+        overflow: auto;
     }
 
     .skt-desktop-navigation-item,
@@ -434,6 +453,8 @@ header .skt-desktop-navigation {
         padding-right: var(--container-spacing-x)
     }
 }
+
+
 
 @media screen and (max-width:1200px) {
     .skt-desktop-navigation-link {
@@ -459,6 +480,8 @@ header .skt-desktop-navigation {
     .skt-dropdown {
         min-width: 100%
     }
+
+
 }
 
 input:focus {
