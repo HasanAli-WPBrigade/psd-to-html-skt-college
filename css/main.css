@@ -863,8 +863,6 @@
 
 }
 
-
-
 .skt-course-detail-section {
     margin-top: var(--section-spacing-y);
 }
@@ -877,6 +875,12 @@
     padding-bottom: 56px;
     padding-left: 30px;
     padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.skt-course-detail-box .skt-course-detail-list{
+    width: 100%;
 }
 
 .skt-course-detail-wrapper {
@@ -1717,7 +1721,7 @@ body::after {
 
 .skt-btn:hover, .skt-btn:focus {
     opacity: 80%;
-    outline: 2px solid var(--color-dark);
-    outline-offset: 3px;
+    /* outline: 2px solid var(--color-dark);
+    outline-offset: 3px; */
 }
 

@@ -29,6 +29,7 @@
     --container-width : 1170px;
 }
 
+
 * {
     margin: 0px;
     padding: 0px;
@@ -94,13 +95,12 @@ header{
     font-size: var(--fs-18);
     font-weight: 700;
     text-transform: uppercase;
-    min-height: var(--button-primary-height);
+    /* min-height: var(--button-primary-height); */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: var(--button-primary-padding-x);
-    padding-right: var(--button-primary-padding-x);
     border-radius: var(--button-primary-rounding);
+    padding: 12px var(--button-primary-padding-x);
 }
 
 .skt-btn.skt-btn-secondary {
