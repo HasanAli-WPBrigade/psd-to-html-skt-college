@@ -1301,8 +1301,12 @@ progress {
 
 
 /* Bottom Slider */
-.skt-bottom-slider .slick-track {
+/* .skt-bottom-slider .slick-track {
     margin-left: -190px;
+} */
+
+.skt-bottom-slider .slick-list {
+    padding: 0px 200px;
 }
 
 .skt-bottom-slide {

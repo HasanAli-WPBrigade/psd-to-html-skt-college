@@ -138,16 +138,14 @@ footer a:hover {
 .skt-footer-social-tooltip {
     position: absolute;
     top: -40px;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     font-size: var(--fs-16);
-    padding-left: 22px;
-    padding-right: 22px;
+    padding: 6px 22px;
     background-color: var(--color-dark);
     color: white;
     display: flex;
     align-items: center;
-    min-height: 35px;
     border-radius: 5px;
 }
 
