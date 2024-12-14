@@ -129,6 +129,14 @@ img {
     margin-bottom: 36px;
 }
 
+.skt-content-one-wrapper{
+    padding-bottom: 0px !important;
+}
+
+.skt-section-has-bg-filled:has(+ .skt-content-one-wrapper){
+    margin-bottom: calc(var(--section-spacing-y) * -1);
+}
+
 /* ---------------------------------- End Utility Styles -------------------------------- */
 
 
