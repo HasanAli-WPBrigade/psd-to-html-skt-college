@@ -1524,6 +1524,49 @@ footer {
     padding-right: 45px
 }
 
+.skt-course-detail-cta span,
+.skt-video-section-cta span,
+.skt-course-detail-cta svg path
+.skt-video-section-cta svg path{
+    transition: all .1s ease-in-out;
+}
+
+.skt-course-detail-cta,
+.skt-video-section-cta{
+    position: relative;
+}
+
+.skt-course-detail-cta::after,
+.skt-video-section-cta::after{
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--color-primary);
+    opacity: 1;
+    transition: all .1s ease-in-out;
+    border-radius: var(--button-primary-rounding);
+}
+
+.skt-video-one-section .skt-video-section-cta svg path{
+    fill: var(--color-primary) !important;
+}
+
+.skt-course-detail-cta:hover::after, 
+.skt-video-section-cta:hover::after{
+    width: 100%;
+}
+
+.skt-course-detail-cta:hover span, 
+.skt-video-section-cta:hover span,
+.skt-course-detail-cta:hover svg path, 
+.skt-video-section-cta:hover svg path{
+    color: var(--color-primary);
+    fill: var(--color-primary) !important; 
+}
+
 @media screen and (max-width:1300px) {
     :root {
         --container-spacing-x: 40px
