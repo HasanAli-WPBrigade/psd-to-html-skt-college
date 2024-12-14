@@ -1477,8 +1477,7 @@ footer {
 
 .skt-footer-social-icon {
     width: auto;
-    height: 30px;
-    object-fit: contain;
+    height: 24px;
     vertical-align: middle
 }
 
