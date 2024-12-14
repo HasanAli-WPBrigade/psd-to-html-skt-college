@@ -1,3 +1,37 @@
+.skt-desktop-navigation-item,
+.skt-dropdown-list-item,
+.skt-mobile-searchbar,
+.skt-position-relative,
+header {
+    position: relative
+}
+
+.skt-course-detail-list-item p,
+.skt-course-detail-list-item span,
+.skt-tab-link {
+    white-space: nowrap
+}
+
+.skt-tab-pane,
+.skt-tab-slider-section .slick-disabled {
+    visibility: hidden;
+    opacity: 0
+}
+
+*,
+input,
+select {
+    box-sizing: border-box
+}
+
+.skt-has-dropdown,
+.skt-offcanvas-close,
+.skt-submit-btn,
+.skt-tab-link,
+button {
+    cursor: pointer
+}
+
 :root {
     --color-dark: #172933;
     --color-dark-text: #05213B;
@@ -10,46 +44,38 @@
     --container-spacing-x: 15px;
     --container-width: 1170px;
     --section-spacing-y: 100px;
-    --calendar-card-border: 1px solid #E1E7EB;
+    --calendar-card-border: 1px solid #E1E7EB
 }
 
-/* ---------------------------------- Global Styles -------------------------------- */
-
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif
 }
 
 body {
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 ul {
-    list-style: none;
+    list-style: none
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit
 }
 
 button {
-    outline: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+    outline: 0;
+    background: 0 0;
+    border: none
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%
 }
-
-/* ---------------------------------- End Global Styles -------------------------------- */
-
-/* ---------------------------------- Utility Styles -------------------------------- */
 
 .skt-container {
     margin-left: auto;
@@ -57,19 +83,17 @@ img {
     width: 100%;
     padding-left: var(--container-spacing-x);
     padding-right: var(--container-spacing-x);
-    max-width: var(--container-width);
+    max-width: var(--container-width)
 }
 
-.skt-position-relative {
-    position: relative;
-}
-
+.skt-accordion,
+.skt-course-detail-box .skt-course-detail-list,
 .skt-w-100 {
-    width: 100%;
+    width: 100%
 }
 
 .skt-text-center {
-    text-align: center;
+    text-align: center
 }
 
 .skt-btn {
@@ -80,72 +104,66 @@ img {
     padding: var(--button-primary-padding-y) var(--button-primary-padding-x);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .skt-btn.skt-btn-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary)
 }
 
 .skt-btn.skt-btn-secondary {
     border: 2px solid var(--color-primary);
-    background-color: white;
+    background-color: #fff
 }
 
 .skt-text-primary {
-    color: var(--color-primary);
+    color: var(--color-primary)
 }
 
 .skt-section-title {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .skt-section-title:has(+ *) {
-    margin-bottom: 36px;
+    margin-bottom: 36px
 }
 
 .skt-section-title:has(+ .skt-text-body) {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .skt-text-body {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.6
 }
 
-.skt-text-body-large{
+.skt-text-body-large {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.8
 }
 
 .skt-text-body:has(+ *) {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
-.skt-text-body:has(+ .skt-video-section-cta), 
-.skt-text-body:has(+ .skt-newsletter-cta-group){
-    margin-bottom: 36px;
+.skt-text-body:has(+ .skt-newsletter-cta-group),
+.skt-text-body:has(+ .skt-video-section-cta) {
+    margin-bottom: 36px
 }
 
-.skt-content-one-wrapper{
-    padding-bottom: 0px !important;
+.skt-content-one-wrapper {
+    padding-bottom: 0 !important
 }
 
-.skt-section-has-bg-filled:has(+ .skt-content-one-wrapper){
-    margin-bottom: calc(var(--section-spacing-y) * -1);
+.skt-section-has-bg-filled:has(+ .skt-content-one-wrapper) {
+    margin-bottom: calc(var(--section-spacing-y) * -1)
 }
-
-/* ---------------------------------- End Utility Styles -------------------------------- */
-
-
-/* ---------------------------------- Header Styles -------------------------------- */
 
 header {
-    background-color: white;
-    position: relative;
-    z-index: 10;
+    background-color: #fff;
+    z-index: 10
 }
 
 .skt-desktop-navigation {
@@ -162,15 +180,15 @@ header {
     background-color: var(--color-dark)
 }
 
-.skt-topbar-navigation-link,
-.skt-topbar-navigation-button {
+.skt-topbar-navigation-button,
+.skt-topbar-navigation-link {
     display: inline-block;
-    margin: 0px;
+    margin: 0
 }
 
-.skt-topbar-navigation-link *,
-.skt-topbar-navigation-button * {
-    vertical-align: middle;
+.skt-topbar-navigation-button *,
+.skt-topbar-navigation-link * {
+    vertical-align: middle
 }
 
 .skt-topbar-navigation {
@@ -178,12 +196,12 @@ header {
     justify-content: flex-end;
     align-items: center;
     column-gap: 58px;
-    padding: 12px 0px;
+    padding: 12px 0
 }
 
 .skt-topbar-navigation-link {
     font-size: 13px;
-    color: white;
+    color: #fff;
     font-weight: 500;
     text-transform: uppercase;
     display: inline-block
@@ -191,7 +209,7 @@ header {
 
 .skt-searchbar-container {
     width: 300px;
-    background-color: white;
+    background-color: #fff;
     padding: 10px 16px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -203,7 +221,7 @@ header {
 }
 
 .skt-navbar-wrapper .skt-btn.skt-btn-primary {
-    padding: 17px var(--button-primary-padding-x);
+    padding: 17px var(--button-primary-padding-x)
 }
 
 .skt-searchbar-container .skt-btn.skt-btn-primary {
@@ -211,6 +229,7 @@ header {
     width: 100%
 }
 
+.skt-course-detail-cta span,
 .skt-searchbar-title {
     font-weight: 700;
     font-size: 16px
@@ -231,12 +250,12 @@ header {
     outline: 0;
     border: 1px solid transparent;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 16px
 }
 
 .skt-searchbar-input:not(:focus),
 .skt-searchbar-input:not(:focus-visible) {
-    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 27.8%)
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 27.8%)
 }
 
 .skt-searchbar-input::placeholder {
@@ -248,12 +267,6 @@ header {
     font-size: 18px;
     font-weight: 600;
     text-transform: capitalize
-}
-
-.skt-desktop-navigation-item,
-.skt-dropdown-list-item,
-.skt-mobile-searchbar {
-    position: relative
 }
 
 .skt-mobile-searchbar input.skt-searchbar-input[type=search]::-webkit-search-cancel-button {
@@ -291,6 +304,7 @@ header {
     margin: 0
 }
 
+.skt-dropdown .skt-has-dropdown::after,
 .skt-mobile-searchbar-btn {
     right: 10px
 }
@@ -300,11 +314,15 @@ header {
 }
 
 .skt-dropdown,
+.skt-footer-about-info li.skt-cta,
+.skt-footer-navigation-wrapper.skt-mobile,
+.skt-footer-social-tooltip,
 .skt-mobile-nav-toggle,
 .skt-mobile-navbar-separator,
 .skt-mobile-navigation-secondary,
 .skt-mobile-search-toggle,
-.skt-searchbar-container-wrapper {
+.skt-searchbar-container-wrapper,
+.skt-slider .slick-dots li button:before {
     display: none
 }
 
@@ -314,7 +332,7 @@ header {
 
 .skt-logo {
     max-width: 190px;
-    width: 100%;
+    width: 100%
 }
 
 .skt-has-dropdown>a,
@@ -337,7 +355,6 @@ header {
 .skt-desktop-navigation {
     display: flex;
     align-items: center;
-
     flex-wrap: wrap;
     justify-content: space-between
 }
@@ -345,7 +362,7 @@ header {
 .skt-mobile-navbar-separator {
     border: none;
     border-bottom: 1px solid #e1e7eb;
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 .skt-mobile-nav-toggle,
@@ -355,7 +372,7 @@ header {
 
 .skt-desktop-navigation-item {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .skt-dropdown {
@@ -368,11 +385,7 @@ header {
 .skt-dropdown-list-link {
     display: block;
     background-color: var(--dropdown-list-link-color-bg);
-    padding: 12px;
-}
-
-.skt-dropdown .skt-has-dropdown::after {
-    right: 10px
+    padding: 12px
 }
 
 .skt-has-dropdown::after {
@@ -387,14 +400,10 @@ header {
     transform-origin: center
 }
 
-.skt-has-dropdown {
-    cursor: pointer
-}
-
 .skt-desktop-navigation li.skt-has-dropdown:hover>a,
 .skt-dropdown-list-link:hover {
     text-decoration: underline;
-    background-color: var(--dropdown-list-link-color-bg-hover);
+    background-color: var(--dropdown-list-link-color-bg-hover)
 }
 
 .skt-desktop-navigation li.skt-has-dropdown:focus-within>.skt-dropdown,
@@ -408,12 +417,13 @@ header {
 }
 
 .skt-desktop-navigation-link:hover,
-.skt-topbar a:hover {
+.skt-topbar a:hover,
+footer a:hover {
     text-decoration: underline
 }
 
-.skt-desktop-navigation-link:active{
-    background-color: transparent;
+.skt-desktop-navigation-link:active {
+    background-color: transparent
 }
 
 .skt-navbar a {
@@ -421,44 +431,38 @@ header {
 }
 
 .skt-btn.skt-btn-primary.skt-mobile {
-    border-radius: 0px;
+    border-radius: 0;
     display: none;
-    margin-top: auto;
+    margin-top: auto
 }
 
 input:focus {
     border: 1px solid var(--color-primary)
 }
 
-/* ---------------------------------- End Header Styles -------------------------------- */
-
-
-/* ---------------------------------- Main Content Styles -------------------------------- */
-
-/* Hero Section - Mobile First */
 .skt-hero {
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 25%)
 }
 
 .skt-hero-column-wrapper {
     min-height: 270px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .skt-hero-column-right {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -1
 }
 
 .skt-hero-column-right img {
     width: 100%;
     display: block;
     object-fit: cover;
-    height: 100%;
+    height: 100%
 }
 
 .skt-hero-column-right::after {
@@ -466,12 +470,18 @@ input:focus {
     position: absolute;
     inset: 0;
     background-color: var(--color-dark-text);
-    opacity: 80%;
+    opacity: 80%
 }
 
 .skt-hero-content-body {
-    color: white;
-    padding: var(--container-spacing-x);
+    color: #fff;
+    padding: var(--container-spacing-x)
+}
+
+.skt-calendar-card-item p,
+.skt-calendar-card-title,
+footer * {
+    color: var(--color-dark-text)
 }
 
 .skt-hero-heading {
@@ -480,140 +490,116 @@ input:focus {
     font-weight: 700;
     line-height: 41px;
     padding-bottom: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 16px
 }
 
 .skt-hero-heading::after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 60px;
     height: 4px;
-    left: 0px;
-    background-color: var(--color-primary);
+    left: 0;
+    background-color: var(--color-primary)
 }
 
 .skt-hero-description {
     font-size: 18px;
     font-weight: 400;
-    line-height: 31px;
+    line-height: 31px
 }
 
 .skt-hero-content-container {
     max-width: 790px;
     margin-left: auto;
-    padding: 10px;
+    padding: 10px
 }
 
-/* Calender */
-
 .skt-calender-card {
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .skt-calendar-card-header {
     border: var(--calendar-card-border);
-    padding-top: 28px;
-    padding-bottom: 24px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    padding: 28px 30px 24px;
+    border-radius: 10px 10px 0 0
 }
 
 .skt-calendar-card-item {
     border: var(--calendar-card-border);
     border-top: none;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 16px 30px;
     display: flex;
     column-gap: 48px;
-    align-items: center;
-}
-
-.skt-calendar-card-title {
-    color: var(--color-dark-text);
+    align-items: center
 }
 
 .skt-calendar-card-item p {
-    color: var(--color-dark-text);
-    font-size: 16px;
+    font-size: 16px
 }
 
-/* Calender Item Date */
-.skt-calendar-card-item p:nth-child(1) {
+.skt-calendar-card-item p:first-child {
     font-weight: 700;
     min-width: 100px;
-    max-width: 100px;
+    max-width: 100px
 }
 
-/* Calender Item Info */
 .skt-calendar-card-item p:nth-child(2) {
-    font-weight: 500;
+    font-weight: 500
 }
 
 .skt-calendar-card-footer {
     background-color: var(--color-dark);
-    padding-top: 24px;
-    padding-bottom: 36px;
-    padding-left: 16px;
-    padding-right: 16px;
-    color: white;
+    padding: 24px 16px 36px;
+    color: #fff
+}
+
+.skt-accordion-header,
+.skt-accordion-header:hover::after {
+    background-color: #fff
 }
 
 .skt-calendar-card-footer-content {
     font-size: 22px;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .skt-calendar-card-footer .skt-btn.skt-btn-primary {
     max-width: 250px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px
 }
-
-
-/* FAQ Section */
 
 .skt-faq-section-title {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.skt-accordion {
-    width: 100%;
+    margin-bottom: 30px
 }
 
 .skt-accordion-item {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .skt-accordion-item.skt-expanded .skt-accordion-content {
-    display: block;
+    display: block
 }
 
 .skt-accordion-content .skt-text-body {
     color: #798389;
-    font-weight: 400;
+    font-weight: 400
 }
 
 .skt-accordion-header {
     border-radius: 5px;
-    background-color: white;
-    color: #222D34;
+    color: #222d34;
     padding: 12px 19px;
     cursor: pointer;
     text-align: left;
     font-size: 18px;
-    transition: background-color 0.skt-3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 10%);
-    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 10%);
+    position: relative
 }
 
 .skt-accordion-header::after {
@@ -627,71 +613,64 @@ input:focus {
     mask-size: contain;
     -webkit-mask-size: contain;
     background-color: var(--color-dark);
-    /* Default color */
     position: absolute;
     width: 20px;
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    right: 19px;
-}
-
-.skt-accordion-header:hover::after {
-    background-color: white;
+    right: 19px
 }
 
 .skt-accordion-item.skt-expanded .skt-accordion-header::after {
     content: "";
     mask-image: url(../images/icons/chevron-up.svg);
     -webkit-mask-image: url(../images/icons/chevron-up.svg);
-    background-color: white;
+    background-color: #fff
 }
 
 .skt-accordion-header h2 {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .skt-accordion-header:hover,
 .skt-accordion-item.skt-expanded .skt-accordion-header {
     background-color: var(--color-dark);
-    color: white;
+    color: #fff
 }
 
 .skt-accordion-content {
     padding-top: 16px;
     padding-bottom: 16px;
-    display: none;
+    display: none
 }
-
-/* Tab Section Slider */
 
 .skt-tab-slider-section-title {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .skt-tab-header-slider .slick-arrow {
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
-    transition: all 300ms ease-in-out;
+    transition: .3s ease-in-out
 }
 
 .skt-tabheaderslider-next {
-    right: 5px;
+    right: 5px
 }
 
 .skt-tab-header-slider .skt-tabheaderslider-prev {
     top: 45%;
     transform: translateY(-50%) rotate(180deg);
-    z-index: 10;
+    z-index: 10
 }
 
 .skt-slider .slick-arrow {
     position: absolute;
     top: 80px;
-    transition: all 300ms ease-in-out;
+    transition: .3s ease-in-out
 }
 
 .skt-slider .slick-arrow::before {
@@ -700,37 +679,32 @@ input:focus {
     background-color: transparent;
     z-index: -1;
     left: -200px;
-    right: -50px;
-}
-
-.skt-tab-slider-section .slick-disabled {
-    visibility: hidden;
-    opacity: 0;
+    right: -50px
 }
 
 .skt-tabslider-prev::before {
     top: -30px;
     bottom: -70px;
-    background-image: -webkit-linear-gradient(to right, rgba(255, 255, 255, 10%), white);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 10%), white);
+    background-image: -webkit-linear-gradient(to right, rgba(255, 255, 255, 10%), #fff);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 10%), #fff)
 }
 
 .skt-tabslider-next::before {
     top: -70px;
     bottom: -30px;
-    background-image: -webkit-linear-gradient(to right, white, rgba(255, 255, 255, 10%));
-    background-image: linear-gradient(to left, white, rgba(255, 255, 255, 10%));
+    background-image: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 10%));
+    background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 10%))
 }
 
 .skt-tabslider-prev {
     left: -10px;
     z-index: 10;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
 }
 
 .skt-tabslider-next {
     right: 20px;
-    z-index: 10;
+    z-index: 10
 }
 
 .skt-tab-link {
@@ -739,65 +713,57 @@ input:focus {
     margin-bottom: 15px;
     text-transform: uppercase;
     text-align: center;
-    cursor: pointer;
     border: none;
-    outline: none;
-    transition: background-color 0.skt-3s;
+    outline: 0;
     font-weight: 600;
-    color: #8894A7;
+    color: #8894a7;
     font-size: 16px;
-    letter-spacing: 0.skt-4px;
+    letter-spacing: 0.skt-4px
 }
 
 .skt-slide-item-title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .skt-slide-item-content-wrapper p {
     font-size: 16px;
-    font-weight: 400;
-}
-
-.skt-tab-link {
-    white-space: nowrap;
+    font-weight: 400
 }
 
 .skt-tab-link.skt-active {
-    color: var(--color-dark);
+    color: var(--color-dark)
 }
 
 .skt-tab-pane {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity .3s ease-in-out
 }
 
 .skt-tab-pane.skt-active {
     visibility: visible;
-    opacity: 1;
+    opacity: 1
 }
 
 .skt-tab-pane:not(.skt-active) {
-    height: 0px;
+    height: 0
 }
 
 .skt-slide-item {
     padding-top: 13px;
     padding-bottom: 15px;
-    margin-right: 30px;
+    margin-right: 30px
 }
 
 .skt-slide-item img {
     width: 100%;
     display: block;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .skt-slide-item-image-wrapper {
     margin-bottom: 16px;
-    height: 160px;
+    height: 160px
 }
 
 .skt-slider .slick-dots {
@@ -809,361 +775,317 @@ input:focus {
     margin-inline: auto;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -50px;
+    bottom: -50px
 }
 
 .skt-slider .slick-dots li,
 .skt-slider .slick-dots li button {
     width: 16px;
     height: 6px !important;
-    transition: all 300ms ease-in-out;
-    padding: 0px;
+    transition: .3s ease-in-out;
+    padding: 0
 }
 
 .skt-slider .slick-dots li button {
-    background: #39181C;
-    opacity: 30%;
+    background: #39181c;
+    opacity: 30%
 }
 
 .skt-slider .slick-dots li.slick-active {
-    width: 98px;
+    width: 98px
 }
 
 .skt-slider .slick-dots li.slick-active button {
     background: var(--color-primary);
     width: 98px;
-    opacity: 100%;
+    opacity: 100%
 }
 
-.skt-slider .slick-dots li button:before {
-    display: none;
-}
-
-
-/* Content one section */
 .skt-content-one-section {
     margin-top: var(--section-spacing-y);
-    padding-top: 4px;
+    padding-top: 4px
 }
 
 .skt-content-one-image {
     display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover
 }
 
 .skt-content-one-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
     background-color: var(--color-primary);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 50px 20px
+}
+
+.skt-content-one-description,
+.skt-content-one-title {
+    padding-left: var(--container-spacing-x);
+    padding-right: var(--container-spacing-x)
 }
 
 .skt-content-one-container-inner {
-    margin-right: auto;
+    margin-right: auto
 }
 
 .skt-content-one-title {
     font-size: 32px;
-    margin-bottom: 10px;
-    padding-left: var(--container-spacing-x);
-    padding-right: var(--container-spacing-x);
+    margin-bottom: 10px
 }
 
 .skt-content-one-description {
     font-size: 16px;
     font-weight: 500;
-    line-height: 26px;
-    padding-left: var(--container-spacing-x);
-    padding-right: var(--container-spacing-x);
-}
-
-.skt-content-one-image {
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    object-fit: cover;
-}
-
-
-/* Course Detail Section */
-
-.skt-course-detail-list-item p,
-.skt-course-detail-list-item span {
-    white-space: nowrap;
+    line-height: 26px
 }
 
 .skt-course-detail-item.skt-course-detail-box {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding-top: 56px;
-    padding-bottom: 56px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 56px 30px;
     display: flex;
-    align-items: center;
-}
-
-.skt-course-detail-box .skt-course-detail-list {
-    width: 100%;
+    align-items: center
 }
 
 .skt-course-detail-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 30px;
+    column-gap: 30px
 }
 
 .skt-course-detail-item {
     width: 100%;
+    padding-top: 29px;
+    padding-bottom: 30px
 }
 
 .skt-course-detail-list {
     display: flex;
     flex-direction: column;
-    row-gap: 19px;
+    row-gap: 19px
 }
 
 .skt-course-detail-list-item {
     display: flex;
     column-gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .skt-course-detail-list-item>div {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: center
 }
 
 .skt-course-detail-list-item>div>span {
-    color: #5D6F80;
+    color: #5d6f80;
     font-size: 13px;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .skt-course-detail-list-item .skt-course-item-icon-wrapper {
-    width: 22px;
+    width: 22px
 }
 
 .skt-course-detail-list-item>p {
     color: var(--color-dark-text);
     font-size: 16px;
-    font-weight: 500;
-}
-
-.skt-course-detail-item {
-    padding-top: 29px;
-    padding-bottom: 30px;
+    font-weight: 500
 }
 
 .skt-course-detail-item-title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .skt-course-detail-item-title:has(+ *) {
-    margin-bottom: 16px;
+    margin-bottom: 16px
 }
 
 .skt-course-detail-cta {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 11px
 }
 
-.skt-course-detail-cta span {
-    font-weight: 700;
-    font-size: 16px;
-}
-
-/* Video Section */
 .skt-video-one-section {
-    background-color: #E6F2F5;
-    background-image: url(../images/video-section-pattern.png);
+    background-color: #e6f2f5;
+    background-image: url(../images/video-section-pattern.png)
 }
 
 .skt-video-section-title {
     font-size: 28px;
     font-weight: 700;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .skt-video-section-image {
-    object-fit: contain;
+    object-fit: contain
 }
 
 .skt-video-section-cta {
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    max-width: max-content;
+    max-width: max-content
 }
 
 .skt-video-section-cta span {
-    font-weight: 700;
+    font-weight: 700
 }
-
-/* Progress Section */
 
 .skt-progress-section-title {
     text-align: center;
     font-weight: 700;
     font-size: 32px;
-    margin-bottom: 36px;
+    margin-bottom: 36px
 }
 
 progress {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
 .skt-progress-item-inner progress::-webkit-progress-bar {
     width: 100%;
-    background-color: #E1E7EB;
+    background-color: #e1e7eb;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
 .skt-progress-item-inner progress::-webkit-progress-value {
     background-color: var(--color-dark);
-    color: white;
+    color: #fff;
     text-align: center;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: width 0.skt-3s ease;
+    font-weight: 700;
+    border-radius: 8px
 }
 
 .skt-progress-item-inner progress::-moz-progress-bar {
     background-color: var(--color-dark);
-    color: white;
+    color: #fff;
     text-align: center;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: width 0.skt-3s ease;
+    font-weight: 700;
+    border-radius: 8px
 }
 
 .skt-progress-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px
 }
 
 .skt-progress-title {
     margin-bottom: 14px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .skt-progress-title-with-logo {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end
 }
 
 .skt-progress-title-with-logo img {
     max-width: 100px;
     margin-bottom: 10px;
-    margin-right: 20px;
+    margin-right: 20px
 }
 
 .skt-progress-title-with-logo p {
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 800
 }
 
-section:not(:first-of-type){
-    padding-top: var(--section-spacing-y);
+section:not(:first-of-type) {
+    padding-top: var(--section-spacing-y)
 }
 
-section:has(+ .skt-section-has-bg-filled),
-section.skt-section-has-bg-filled{
-    padding-bottom: var(--section-spacing-y);
+section.skt-section-has-bg-filled,
+section:has(+ .skt-section-has-bg-filled) {
+    padding-bottom: var(--section-spacing-y)
 }
-/* Newsletter Section */
 
 .skt-newsletter-section {
     background-color: var(--color-dark);
     background-image: url(../images/newsletter-bg-pattern.png);
-    color: white;
+    color: #fff
 }
 
 .skt-newsletter-section-title {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 36px;
+    margin-bottom: 36px
 }
 
 .skt-newsletter-content-description {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .skt-newsletter-section .skt-btn {
     max-width: 288px;
     width: 100%;
-    margin: auto;
+    margin: auto
+}
+
+.skt-bottom-slide,
+.skt-footer-navigation-wrapper:first-of-type {
+    margin-right: 10px
 }
 
 .skt-newsletter-cta-group {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 16px
 }
-
-/* Bottom Slider */
 
 .skt-bottom-slide {
     height: 245px;
+    position: relative;
+    margin-left: 10px
 }
 
 .skt-bottom-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .skt-bottom-slide a {
     display: block;
-    height: 100%;
+    height: 100%
 }
 
 .skt-bottom-slide-image-wrapper {
-    height: 100%;
+    height: 100%
 }
 
 .skt-bottom-slider .slick-arrow {
     position: absolute;
-    background-color: black;
     z-index: 10;
-}
-
-.skt-bottom-slider .slick-arrow {
     top: 51%;
     transform: translateY(-50%);
     background-color: transparent;
-    max-width: 30px;
+    max-width: 30px
 }
 
 .skt-bottom-slider .skt-bottom-slider-prev {
     left: 58px !important;
     top: 33%;
     transform: rotate(180deg) translateY(-50%);
-    transform-origin: center;
+    transform-origin: center
 }
 
 .skt-bottom-slider .skt-bottom-slider-next {
-    right: 58px !important;
-}
-
-.skt-bottom-slide {
-    position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
+    right: 58px !important
 }
 
 .skt-bottom-slide-content {
@@ -1174,20 +1096,17 @@ section.skt-section-has-bg-filled{
     place-items: center;
     text-align: center;
     opacity: 0;
-    transition: all 300ms ease-in-out;
-}
-
-.skt-bottom-slide-content {
-    color: white;
+    transition: .3s ease-in-out;
+    color: #fff;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 700
 }
 
-.skt-bottom-slide:hover .skt-bottom-slide-content {
-    opacity: 1;
+.skt-bottom-slide:hover .skt-bottom-slide-content,
+.skt-form-content,
+.skt-thank-you-content {
+    opacity: 1
 }
-
-/* Stepper Form */
 
 .skt-offcanvas-backdrop {
     position: fixed;
@@ -1195,16 +1114,16 @@ section.skt-section-has-bg-filled{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, .5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1040;
+    transition: opacity .3s, visibility .3s;
+    z-index: 1040
 }
 
 .skt-offcanvas-backdrop.skt-show {
     opacity: 1;
-    visibility: visible;
+    visibility: visible
 }
 
 .skt-offcanvas {
@@ -1215,181 +1134,161 @@ section.skt-section-has-bg-filled{
     top: 0;
     right: var(--offcanvas-offset);
     height: 100%;
-    background: white;
-    transition: transform 0.3s ease;
+    background: #fff;
+    transition: transform .3s;
     z-index: 1045;
-    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
-    overflow-y: auto;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, .15);
+    overflow-y: auto
 }
 
 .skt-offcanvas.skt-show {
-    transform: translateX(var(--offcanvas-offset));
+    transform: translateX(var(--offcanvas-offset))
 }
 
 .skt-offcanvas-header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px;
+    padding: 20px
 }
 
 .skt-offcanvas-container {
     max-width: 578px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .skt-offcanvas-title {
     margin: 0;
-    font-size: 1.skt-25rem;
+    font-size: 1.skt-25rem
 }
 
 .skt-offcanvas-close {
-    background: none;
+    background: 0 0;
     border: none;
     font-size: 1.skt-5rem;
-    cursor: pointer;
     padding: 0.skt-5rem;
-    color: #666;
-}
-
-.skt-offcanvas-body {
-    padding: 1.skt-5rem;
-}
-
-.skt-offcanvas-close {
     display: flex;
     align-items: center;
     column-gap: 16px;
     text-transform: uppercase;
-    color: #231F20;
-    border-radius: 2px;
+    color: #231f20;
+    border-radius: 2px
 }
 
-.skt-offcanvas-close:hover,
-.skt-offcanvas-close:focus {
+.skt-offcanvas-body {
+    padding: 1.skt-5rem
+}
+
+.skt-offcanvas-close:focus,
+.skt-offcanvas-close:hover {
     outline: 2px solid var(--color-dark);
-    outline-offset: 3px;
-}
-
-/* Form Styles */
-.skt-form-content,
-.skt-thank-you-content {
-    opacity: 1;
-    transition: opacity 0.skt-3s ease;
+    outline-offset: 3px
 }
 
 .skt-form-content.skt-hide,
 .skt-thank-you-content.skt-hide {
     display: none;
-    opacity: 0;
+    opacity: 0
 }
 
 .skt-form-title {
     color: var(--color-dark);
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 24px
 }
 
 .skt-form-heading {
     font-size: 36px;
-    color: #231F20;
-    margin-bottom: 5px;
+    color: #231f20;
+    margin-bottom: 5px
 }
 
 .skt-form-subtitle {
-    color: #231F20;
+    color: #231f20;
     font-size: 18px;
-    margin-bottom: 80px;
+    margin-bottom: 80px
 }
 
 .skt-form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .skt-form-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-}
-
-.skt-form-field {
-    position: relative;
+    position: relative
 }
 
 .skt-form-field label {
     position: absolute;
     font-size: 10px;
-    color: #8D8D8D;
+    color: #8d8d8d;
     pointer-events: none;
     left: 13px;
-    top: 5px;
+    top: 5px
 }
 
 .skt-form-field input,
 .skt-form-field select {
     --background-color: #F5F5F5;
     background-color: var(--background-color);
-    border-radius: 0px;
-    padding: 0px;
-    padding-top: 22px;
-    padding-bottom: 7px;
+    border-radius: 0;
+    padding: 22px 13px 7px;
     font-size: 14px;
-    padding-left: 13px;
-    padding-right: 13px;
     border: 1px solid var(--background-color);
-    outline: none;
+    outline: 0;
     border-top-color: rgba(0, 0, 0, 27.8%);
-    height: 50px;
+    height: 50px
 }
 
 .skt-form-field input::placeholder {
-    color: rgba(19, 19, 19, 50%);
+    color: rgba(19, 19, 19, 50%)
 }
 
 .skt-form-fields {
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
 .skt-form-field select {
     appearance: none;
     -moz-appearance: none;
-    -webkit-appearance: none;
+    -webkit-appearance: none
 }
 
 .skt-form-field input:focus,
 .skt-form-field select:focus {
-    border-color: var(--color-primary);
+    border-color: var(--color-primary)
 }
 
 #requestForm .skt-btn-primary {
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .skt-form-field input[type=date]:invalid::-webkit-datetime-edit {
-    color: rgba(19, 19, 19, 0.5);
+    color: rgba(19, 19, 19, .5)
 }
 
 .skt-form-field select:invalid {
-    color: rgba(19, 19, 19, 0.5);
+    color: rgba(19, 19, 19, .5)
 }
 
 .skt-offcanvas-container {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 100px
 }
 
-select,
-input {
+input,
+select {
     padding: 8px 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%
 }
 
 .skt-submit-btn {
@@ -1398,16 +1297,14 @@ input {
     border: none;
     padding: 12px 24px;
     border-radius: 4px;
-    cursor: pointer;
     font-weight: 500;
-    width: 100%;
+    width: 100%
 }
 
 .skt-submit-btn:hover {
-    background: #e5a611;
+    background: #e5a611
 }
 
-/* Thank You Styles */
 .skt-success-icon {
     width: 60px;
     height: 60px;
@@ -1416,98 +1313,79 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 26px;
+    margin-bottom: 26px
 }
 
 .skt-checkmark {
     color: #4caf50;
-    font-size: 30px;
+    font-size: 30px
 }
-
 
 .skt-thank-you-title {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #231F20;
+    color: #231f20
 }
 
 .skt-thank-you-message {
-    color: #1D1D1B;
+    color: #1d1d1b;
     line-height: 1.6;
     max-width: 400px;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .skt-thank-you-content .skt-form-title {
-    margin-bottom: 75px;
+    margin-bottom: 75px
 }
 
-.skt-btn {
-    transition: all 0.skt-2s ease-in-out;
-}
-
-.skt-btn:hover,
-.skt-btn:focus {
-    opacity: 80%;
+.skt-btn:focus,
+.skt-btn:hover {
+    opacity: 80%
 }
 
 .skt-content-one-image-wrapper {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 250px;
+    min-height: 250px
 }
-
-/* ---------------------------------- End Main Content Styles -------------------------------- */
-
-
-/* ---------------------------------- Footer Styles -------------------------------- */
-
 
 footer {
-    padding: 70px 0px 90px 0px;
-    background-color: #E4EAEC;
-}
-
-footer * {
-    color: var(--color-dark-text);
-}
-
-footer a:hover {
-    text-decoration: underline;
+    padding: 70px 0 90px;
+    background-color: #e4eaec
 }
 
 .skt-footer-top {
     display: grid;
-    grid-template-columns: 1fr 670px;
+    grid-template-columns: 1fr 670px
 }
 
 .skt-footer-logo {
     max-width: 215px;
     width: 100%;
-    margin-bottom: 19px;
+    margin-bottom: 19px
 }
 
 .skt-footer-navigation-list {
-    margin-top: -9px;
+    margin-top: -9px
 }
 
 .skt-footer-navigation-list li {
-    margin-bottom: 7px;
+    margin-bottom: 7px
 }
 
 .skt-footer-about h3 {
     color: var(--color-dark-text);
     font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: 700;
+    margin-bottom: 8px
 }
 
 .skt-footer-about-info {
     display: flex;
     flex-direction: column;
     row-gap: 6px;
-    max-width: 280px;
+    max-width: 280px
 }
 
 .skt-footer-about-info li {
@@ -1517,91 +1395,91 @@ footer a:hover {
     color: var(--color-dark-text);
     font-size: 15px;
     font-weight: 500;
-    margin-top: 3px;
+    margin-top: 3px
 }
 
 .skt-footer-about-info li img {
     margin-top: 5px;
     width: 16px;
-    height: 16px;
+    height: 16px
 }
 
 .skt-footer-right-top {
-    text-align: right;
+    text-align: right
 }
 
 .skt-footer-right-top p {
     font-size: 13px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .skt-footer-right-top img {
     width: 100%;
-    max-width: 580px;
+    max-width: 580px
 }
 
 .skt-footer-right-bottom {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .skt-footer-navigation-link {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .skt-footer-separator {
     border: none;
-    border-bottom: 1px solid #9EB2BD;
+    border-bottom: 1px solid #9eb2bd;
     margin-top: 27px;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .skt-footer-copyright p {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .skt-footer-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 30px
 }
 
 .skt-footer-secondary-list {
     display: flex;
     flex-wrap: wrap;
     row-gap: 10px;
-    margin-top: 7px;
+    margin-top: 7px
 }
 
 .skt-footer-secondary-list-link {
     display: inline-block;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .skt-footer-secondary-list-item+.skt-footer-secondary-list-item {
     margin-left: 14px;
     padding-left: 16px;
-    border-left: 1px solid var(--color-dark-text);
+    border-left: 1px solid var(--color-dark-text)
 }
 
 .skt-footer-social-list {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    align-items: center;
+    align-items: center
 }
 
 .skt-footer-social-icon {
     width: auto;
     height: 30px;
     object-fit: contain;
-    vertical-align: middle;
+    vertical-align: middle
 }
 
 .skt-footer-social-tooltip {
@@ -1612,10 +1490,9 @@ footer a:hover {
     font-size: 16px;
     padding: 6px 22px;
     background-color: var(--color-dark);
-    color: white;
-    display: flex;
+    color: #fff;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .skt-footer-social-tooltip::after {
@@ -1627,67 +1504,46 @@ footer a:hover {
     transform: rotate(45deg) translateX(-50%);
     bottom: -5px;
     background-color: var(--color-dark);
-    z-index: -1;
+    z-index: -1
 }
 
 .skt-footer-social-link {
     position: relative;
     display: inline-block;
-    z-index: 1;
-}
-
-.skt-footer-social-tooltip {
-    display: none;
+    z-index: 1
 }
 
 .skt-footer-social-link:hover .skt-footer-social-tooltip {
-    display: flex;
+    display: flex
 }
 
 .skt-footer-right-bottom {
-    margin-top: 50px;
-}
-
-.skt-footer-about-info li.skt-cta {
-    display: none;
-}
-
-.skt-footer-navigation-wrapper.skt-mobile {
-    display: none;
+    margin-top: 50px
 }
 
 .skt-footer-socials {
-    padding-right: 45px;
+    padding-right: 45px
 }
-
-.skt-footer-navigation-wrapper:nth-of-type(1) {
-    margin-right: 10px;
-}
-
-/* ---------------------------------- End Footer Styles -------------------------------- */
-
-/* ---------------------------------- Responsive Styles -------------------------------- */
 
 @media screen and (max-width:1300px) {
     :root {
-        --container-spacing-x: 40px;
+        --container-spacing-x: 40px
     }
 
     .skt-dropdown {
-        max-width: 300px;
+        max-width: 300px
     }
 
     .skt-footer-social-tooltip {
         padding-left: 15px;
-        padding-right: 15px;
+        padding-right: 15px
     }
 }
 
 @media screen and (max-width:1200px) {
-
     body .skt-container {
         padding-left: var(--container-spacing-x) !important;
-        padding-right: var(--container-spacing-x) !important;
+        padding-right: var(--container-spacing-x) !important
     }
 
     .skt-desktop-navigation-link {
@@ -1701,6 +1557,18 @@ footer a:hover {
 }
 
 @media screen and (min-width :1025px) {
+
+    .skt-hero-column-left::after,
+    .skt-hero-column-left::before {
+        border-radius: 100%;
+        width: 3465px;
+        height: 3465px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        position: absolute
+    }
+
     .skt-site-logo {
         margin-right: 59px
     }
@@ -1710,7 +1578,7 @@ footer a:hover {
     }
 
     .skt-desktop-navigation>.skt-has-dropdown::after {
-        content: none;
+        content: none
     }
 
     .skt-desktop-navigation>li>a {
@@ -1721,195 +1589,182 @@ footer a:hover {
     .skt-hero-column-right {
         position: relative;
         flex: 1;
-        background-color: var(--color-dark);
+        background-color: var(--color-dark)
     }
 
     .skt-hero-column-left {
         position: relative;
-        flex: 1;
+        flex: 1
     }
 
     .skt-hero-column-left::before {
-        content: "";
-        position: absolute;
         background-color: var(--color-dark);
-        border-radius: 100%;
-        width: 3465px;
-        height: 3465px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -69px;
+        right: -69px
     }
 
     .skt-hero-column-right img {
-        margin-left: 5.skt-3px;
+        margin-left: 5.skt-3px
     }
 
     .skt-hero-column-left::after {
-        content: "";
-        position: absolute;
-        border-radius: 100%;
-        width: 3465px;
-        height: 3465px;
-        top: 50%;
-        transform: translateY(-50%);
         right: -114px;
-        border: 46px solid rgba(255, 255, 255, 30%);
+        border: 46px solid;
+        opacity: 0.05;
     }
 
     .skt-hero-column-wrapper {
         min-height: 565px;
-        /* max-height: 565px; */
-        align-items: stretch;
+        align-items: stretch
     }
 
     .skt-hero-description {
         position: relative;
         font-size: 22px;
         font-weight: 500;
-        line-height: 36px;
+        line-height: 36px
     }
 
     .skt-hero-heading {
         font-size: 64px;
         line-height: 74px;
         padding-bottom: 41px;
-        margin-bottom: 12px;
+        margin-bottom: 12px
     }
 
     .skt-hero-heading::after {
         width: 80px;
-        height: 5px;
+        height: 5px
     }
 
     .skt-hero-column-right::after {
-        display: none;
+        display: none
     }
 
     .skt-hero-content-body {
         position: relative;
         z-index: 4;
-        padding: 50px 10px 64px 10px;
+        padding: 50px 10px 64px;
         max-width: 790px;
-        margin-left: auto;
+        margin-left: auto
     }
 
     .skt-hero-column-left {
         display: flex;
-        align-items: center;
+        align-items: center
     }
 
     .skt-calendar-card-footer {
         display: flex;
         gap: 40px;
         padding-top: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 24px
     }
 
-    .skt-calendar-card-header,
     .skt-calendar-card-footer,
+    .skt-calendar-card-header,
     .skt-calendar-card-item {
         padding-left: 35px;
-        padding-right: 36px;
+        padding-right: 36px
     }
 
     .skt-calendar-card-footer-content {
-        margin: 0px;
+        margin: 0
     }
 
-    .skt-calender .skt-container {
-        padding-left: 0px;
-        padding-right: 0px;
+    .skt-calender .skt-container,
+    .skt-course-detail-section .skt-container {
+        padding-left: 0;
+        padding-right: 0
     }
 
     .skt-calendar-card-title {
-        text-align: center;
+        text-align: center
     }
 
     .skt-calendar-card-header {
         padding-top: 18px;
-        padding-bottom: 21px;
+        padding-bottom: 21px
     }
 
     .skt-calendar-card-item {
         padding-top: 19px;
-        column-gap: 68px;
+        column-gap: 68px
     }
 
     .skt-calendar-card-footer .skt-btn.skt-btn-primary {
         max-width: 288px;
-        font-size: 16px;
+        font-size: 16px
     }
 
     .skt-faq-section {
-        background-color: rgba(23, 41, 51, 10%);
+        background-color: rgba(23, 41, 51, 10%)
     }
 
     .skt-accordion-header h2 {
-        font-size: 18px;
+        font-size: 18px
     }
 
     .skt-faq-section-accordion-wrapper {
         display: flex;
-        gap: 30px;
+        gap: 30px
     }
 
-    .skt-faq-section .skt-container {
-        padding: 0px;
+    .skt-faq-section .skt-container,
+    .skt-newsletter-section .skt-container,
+    .skt-tab-slider-section .skt-container,
+    .skt-video-section .skt-container,
+    footer .skt-container {
+        padding: 0
     }
 
     .skt-faq-section-title {
         font-size: 36px;
-        margin-bottom: 50px;
+        margin-bottom: 50px
     }
 
     .skt-accordion-content {
         padding-top: 25px;
         padding-left: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 20px
     }
 
     .skt-accordion-content .skt-text-body {
-        line-height: 1.7;
+        line-height: 1.7
     }
 
     .skt-accordion-item {
-        margin-bottom: 2px;
+        margin-bottom: 2px
     }
 
     .skt-tab-header-slider .skt-slick-track {
-        padding-left: 20px;
+        padding-left: 20px
     }
 
     .skt-tabheaderslider-prev {
-        left: -25px;
+        left: -25px
     }
 
     .skt-slider .slick-dots li,
     .skt-slider .slick-dots li button {
-        width: 24px !important;
+        width: 24px !important
     }
 
     .skt-slider .slick-dots li.slick-active,
     .skt-slider .slick-dots li.slick-active button {
-        width: 139px !important;
+        width: 139px !important
     }
 
     .skt-tab-header-slider {
-        padding-right: 100px;
-    }
-
-    .skt-tab-slider-section .skt-container {
-        padding: 0px;
+        padding-right: 100px
     }
 
     .skt-tab-header-slider .skt-tab-link {
-        max-width: max-content;
+        max-width: max-content
     }
 
     .skt-tab-header-slider .slick-active:not(:last-child) {
         margin-right: 103px;
-        white-space: nowrap;
+        white-space: nowrap
     }
 
     .skt-tab-slider-section-title {
@@ -1918,22 +1773,22 @@ footer a:hover {
         font-size: 32px;
         font-weight: 700;
         margin-top: -2px;
-        margin-left: -1px;
+        margin-left: -1px
     }
 
     .skt-tab-content {
         padding-top: 4px;
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 10px
     }
 
     .skt-slide-item-title {
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 
     .skt-content-one-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: center
     }
 
     .skt-content-one-image-wrapper {
@@ -1941,79 +1796,66 @@ footer a:hover {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        min-height: 449px;
+        min-height: 449px
     }
 
     .skt-content-one-container {
         flex: 1;
         display: flex;
         align-items: center;
-        padding-left: 100px;
+        padding-left: 100px
     }
 
     .skt-content-one-container-inner {
-        max-width: 780px;
+        max-width: 780px
     }
 
     .skt-content-one-title {
         font-size: 50px;
         margin-bottom: 10px;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0
     }
 
     .skt-content-one-description {
         font-size: 16px;
         font-weight: 500;
         line-height: 26px;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0
     }
 
     .skt-course-detail-wrapper {
-        grid-template-columns: 1fr 1fr 1fr !important;
-    }
-
-    .skt-course-detail-section .skt-container {
-        padding-left: 0px;
-        padding-right: 0px;
+        grid-template-columns: 1fr 1fr 1fr !important
     }
 
     .skt-course-detail-section .skt-course-detail-item.skt-course-detail-box {
-        padding-left: 22px;
-        padding-right: 22px;
-        padding-top: 82px;
-        padding-bottom: 82px;
+        padding: 82px 22px;
         border-radius: 10px;
-        max-width: 370px;
+        max-width: 370px
     }
 
     .skt-course-detail-description {
-        max-width: 330px;
-    }
-
-    .skt-video-section .skt-container {
-        padding: 0px;
+        max-width: 330px
     }
 
     .skt-video-section-content-wrapper {
         display: flex;
-        gap: 70px;
+        gap: 70px
     }
 
     .skt-video-two-section .skt-video-section-content-wrapper {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse
     }
 
     .skt-video-section-title {
         font-size: 44px;
-        margin-top: 12px;
+        margin-top: 12px
     }
-
 
     .skt-progress-section-title {
         font-size: 54px;
-        margin-top: -9px;
+        margin-top: -9px
     }
 
     .skt-progress-list {
@@ -2021,7 +1863,7 @@ footer a:hover {
         margin: auto;
         padding-left: 90px;
         padding-top: 6px;
-        gap: 0px;
+        gap: 0
     }
 
     .skt-progress-title {
@@ -2029,33 +1871,31 @@ footer a:hover {
         font-size: 18px;
         line-height: 18px;
         min-width: 180px;
+        margin-bottom: 0
     }
 
     .skt-progress-item-inner {
         display: flex;
         align-items: center;
         text-align: right;
-        /* gap: 30px; */
-        justify-content: space-evenly;
+        justify-content: space-evenly
     }
 
     .skt-progress-title-wrapper {
         min-width: 150px;
         max-width: 150px;
+        display: flex;
+        justify-content: flex-end
     }
 
     .skt-progress-container {
         max-width: 500px;
-        margin-top: 7px;
-    }
-
-    .skt-progress-title-wrapper {
-        display: flex;
-        justify-content: flex-end;
+        margin-top: 7px
     }
 
     .skt-progress-item {
         position: relative;
+        margin-bottom: 32px
     }
 
     .skt-progress-title-with-logo p {
@@ -2063,47 +1903,39 @@ footer a:hover {
         left: 47%;
         top: 10px;
         transform: translateX(-50%);
-        font-size: 20px;
+        font-size: 20px
     }
 
     .skt-progress-title-with-logo img {
         min-width: 213px;
-        /* margin-bottom: 10px; */
         margin-top: 6px;
         padding-left: 3px;
-        margin-right: 22px;
+        margin-right: 22px
     }
 
-    .skt-progress-title {
-        margin-bottom: 0px;
-    }
-
-    .skt-progress-item {
-        margin-bottom: 32px;
-    }
-
-    .skt-progress-item:nth-of-type(1) {
+    .skt-progress-item:first-of-type {
         order: -1;
-        margin-bottom: 14px;
+        margin-bottom: 14px
     }
 
-    .skt-progress-item:nth-of-type(1) .skt-progress-container {
-        margin-top: 18px;
+    .skt-progress-item:first-of-type .skt-progress-container {
+        margin-top: 18px
     }
-
 
     .skt-progress-item:nth-of-type(6) {
-        order: -1;
+        order: -1
     }
 
     .skt-newsletter-cta-group {
         flex-direction: row;
         justify-content: center;
-        margin-left: -5px;
+        margin-left: -5px
     }
 
     .skt-newsletter-cta-group .skt-btn {
         font-size: 16px;
+        margin: 0;
+        border-radius: 5px
     }
 
     .skt-newsletter-section-title {
@@ -2111,7 +1943,7 @@ footer a:hover {
         margin-top: -10px;
         margin-bottom: 44px;
         margin-left: -5px;
-        position: relative;
+        position: relative
     }
 
     .skt-newsletter-section-title::after {
@@ -2122,7 +1954,7 @@ footer a:hover {
         height: 4px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: var(--color-primary);
+        background-color: var(--color-primary)
     }
 
     .skt-newsletter-content-description {
@@ -2130,80 +1962,74 @@ footer a:hover {
         font-weight: 500;
         line-height: 36px;
         margin-left: -5px;
-        margin-bottom: 28px;
-    }
-
-    .skt-newsletter-cta-group .skt-btn {
-        margin: 0px;
-        border-radius: 5px;
-    }
-
-    .skt-newsletter-section .skt-container {
-        padding: 0px;
+        margin-bottom: 28px
     }
 
     .skt-bottom-slider .slick-list {
-        padding: 0px 200px;
+        padding: 0 200px
     }
 
     .skt-bottom-slide.slick-current .skt-bottom-slide-content,
     .skt-bottom-slide.slick-slide:not(.slick-active) .skt-bottom-slide-content {
         opacity: 1;
         background-color: rgba(0, 0, 0, 70%);
-        color: transparent;
-    }
-
-    footer .skt-container {
-        padding: 0px;
+        color: transparent
     }
 
     .skt-footer-right-top p {
         padding-right: 12px;
-        padding-top: 3px;
+        padding-top: 3px
     }
 
     .skt-footer-right-top img {
-        padding-right: 3px;
+        padding-right: 3px
     }
-
 }
 
 @media screen and (min-width:768px) and (max-width:1024px) {
     .skt-course-detail-wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr
     }
 
     .skt-course-detail-box {
-        grid-column: span 2;
+        grid-column: span 2
     }
-
 }
 
 @media screen and (max-width:1024px) {
     :root {
         --section-spacing-y: 50px;
         --desktop-navigation-item-height: 50px;
-        --container-spacing-x: 15px;
+        --container-spacing-x: 15px
     }
 
     header {
-        background-color: #F1F4F5;
+        background-color: #f1f4f5
     }
 
-    .skt-faq-section{
-        padding-top: 0px !important;
+    .skt-faq-section {
+        padding-top: 0 !important
     }
 
-    .skt-btn.skt-btn-primary.skt-mobile {
-        display: block;
+    .skt-btn.skt-btn-primary.skt-mobile,
+    .skt-dropdown.skt-show,
+    .skt-footer-about-info li.skt-cta,
+    .skt-footer-navigation-wrapper.skt-mobile,
+    .skt-mobile-nav-toggle,
+    .skt-mobile-navbar-separator,
+    .skt-mobile-navigation-secondary,
+    .skt-mobile-search-toggle,
+    .skt-mobile-search-wrapper.skt-show,
+    .skt-navbar-nav.skt-show {
+        display: block
     }
 
     .skt-navbar-wrapper {
-        padding: var(--container-spacing-x) 0;
+        padding: var(--container-spacing-x) 0
     }
 
     .skt-mobile-navigation-secondary {
-        margin: 0 0 20px 0px;
+        margin: 0 0 20px
     }
 
     .skt-has-dropdown {
@@ -2223,14 +2049,19 @@ footer a:hover {
         padding-left: 40px
     }
 
+    .skt-accordion-2,
     .skt-desktop-navigation .skt-desktop-navigation-item:last-of-type,
     .skt-desktop-navigation li.skt-has-dropdown:hover>.skt-dropdown:not(.skt-show),
+    .skt-footer-about-info img,
+    .skt-footer-about-info li.skt-email,
+    .skt-footer-navigation-wrapper,
+    .skt-slider .slick-arrow::before,
     .skt-topbar {
         display: none
     }
 
     .skt-desktop-navigation-link {
-        padding: 14px 0;
+        padding: 14px 0
     }
 
     .skt-has-dropdown.skt-active>.skt-dropdown-list-link {
@@ -2256,20 +2087,10 @@ footer a:hover {
         position: static
     }
 
-    .skt-dropdown.skt-show,
-    .skt-mobile-nav-toggle,
-    .skt-mobile-navbar-separator,
-    .skt-mobile-navigation-secondary,
-    .skt-mobile-search-toggle,
-    .skt-mobile-search-wrapper.skt-show,
-    .skt-navbar-nav.skt-show {
-        display: block
-    }
-
     .skt-mobile-search-wrapper.skt-show,
     .skt-navbar-nav.skt-show {
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .skt-navbar-nav {
@@ -2280,7 +2101,7 @@ footer a:hover {
         right: 0;
         display: none;
         background-color: #fff;
-        overflow: auto;
+        overflow: auto
     }
 
     .skt-desktop-navigation-item,
@@ -2303,169 +2124,121 @@ footer a:hover {
     }
 
     .skt-tab-header-slider .slick-arrow {
-        display: none !important;
+        display: none !important
     }
 
     .skt-slider .slick-arrow {
-        width: 30px;
+        width: 30px
     }
 
     .skt-tabslider-prev.slick-arrow {
         top: 73px !important;
-        left: -5px !important;
+        left: -5px !important
     }
 
     .skt-tabslider-next.slick-arrow {
-        right: -5px !important;
+        right: -5px !important
     }
 
-    .skt-slider .slick-arrow::before {
-        display: none;
-    }
-
+    .skt-bottom-slider .slick-track,
     .skt-slide-item {
-        margin: 0px;
+        margin: 0
     }
 
     .skt-content-one-section {
-        margin-top: 150px;
+        margin-top: 150px
     }
 
     .skt-course-detail-item {
-        padding-left: 0px;
-    }
-
-    .skt-bottom-slider .slick-track {
-        margin: 0px;
+        padding-left: 0
     }
 
     .skt-bottom-slider .skt-bottom-slider-prev {
-        left: 5px !important;
+        left: 5px !important
     }
 
     .skt-bottom-slider .skt-bottom-slider-next {
-        right: 5px !important;
+        right: 5px !important
     }
 
     .skt-offcanvas {
         --offcanvas-width: 100%;
         --offcanvas-offset: -100%;
-
         padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .skt-accordion-2 {
-        display: none;
-    }
-
-
-    .skt-footer-navigation-list {
-        display: inline-block;
+        padding-right: 20px
     }
 
     .skt-footer-navigation-item {
         line-height: 1;
-        display: inline-block;
+        display: inline-block
     }
-
 
     .skt-footer-navigation-item:not(:last-child)::after {
         content: " | ";
-        margin-right: 5px;
+        margin-right: 5px
     }
 
     .skt-footer-socials {
-        padding-right: 0px;
-        padding-top: 4px;
+        padding-right: 0;
+        padding-top: 4px
     }
 
+    .skt-footer-column-left,
     .skt-footer-right-top,
-    .skt-footer-right-top p {
-        text-align: center;
+    .skt-footer-right-top p,
+    .skt-video-section {
+        text-align: center
     }
 
     .skt-footer-right-bottom {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap
     }
 
     .skt-footer-navigation-list {
+        display: inline-block;
         display: flex;
         flex-wrap: wrap;
         row-gap: 5px;
-        justify-content: center;
-    }
-
-    .skt-footer-navigation-wrapper {
-        display: none;
-    }
-
-    .skt-footer-navigation-wrapper.skt-mobile {
-        display: block;
-    }
-
-
-    .skt-footer-about-info img {
-        display: none;
+        justify-content: center
     }
 
     .skt-footer-about-info li {
         justify-content: center;
-        text-align: center;
+        text-align: center
     }
 
     .skt-footer-top {
         grid-template-columns: 1fr;
         row-gap: 30px;
-        place-items: center;
+        place-items: center
     }
 
     .skt-footer-about-info {
-        max-width: 100%;
+        max-width: 100%
     }
-
-    .skt-footer-column-left {
-        text-align: center;
-    }
-
-    .skt-footer-about-info li.skt-email {
-        display: none;
-    }
-
-    .skt-footer-about-info li.skt-cta {
-        display: block;
-    }
-
 
     .skt-footer-bottom {
         flex-direction: column-reverse;
-        align-items: center;
+        align-items: center
     }
 
     .skt-footer-secondary-list {
-        justify-content: center;
+        justify-content: center
     }
 
     .skt-footer-navigation-link {
-        font-size: 14px;
+        font-size: 14px
     }
 
-
-    .skt-video-section{
-        text-align: center;
+    .skt-video-section-image:has(+ *) {
+        margin-bottom: 20px
     }
-
-    .skt-video-section-image:has(+ *){
-        margin-bottom: 20px;
-    }
-
 }
 
 @media screen and (max-width:576px) {
-
-    .skt-video-section{
-        text-align: left;
+    .skt-video-section {
+        text-align: left
     }
 
     .skt-logo {
@@ -2479,40 +2252,36 @@ footer a:hover {
 
     .skt-offcanvas {
         width: 100%;
-        right: -100%;
+        right: -100%
     }
 
     .skt-offcanvas.skt-show {
-        transform: translateX(-100%);
+        transform: translateX(-100%)
     }
 
-    .skt-section-title{
-        font-size: 24px;
+    .skt-section-title {
+        font-size: 24px
     }
 
     .skt-section-title:has(+ .skt-text-body),
     .skt-text-body:has(+ *) {
-        margin-bottom: 14px;
+        margin-bottom: 14px
     }
 
     .skt-section-title:has(+ *),
-    .skt-text-body:has(+ .skt-video-section-cta), 
-    .skt-text-body:has(+ .skt-newsletter-cta-group){
-        margin-bottom: 24px;
+    .skt-text-body:has(+ .skt-newsletter-cta-group),
+    .skt-text-body:has(+ .skt-video-section-cta) {
+        margin-bottom: 24px
     }
-
-
 }
 
-@media screen and (max-width : 370px) {
+@media screen and (max-width :370px) {
     .skt-calendar-card-item {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .skt-course-detail-list-item {
         flex-direction: column;
-        align-items: flex-start !important;
+        align-items: flex-start !important
     }
 }
-
-/* ---------------------------------- End Responsive Styles -------------------------------- */
